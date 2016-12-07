@@ -98,20 +98,24 @@ setTimeout(makeMm, 6500)
 setTimeout(makeY, 7000)
 setTimeout(makeLname, 8000)
 
-let mainDiv = document.getElementById("main").style.marginLeft;
-mainDiv = "0";
+let mainDiv = 0;
   function openMenu(x){
     x.classList.toggle("change");
-    if (parseInt(mainDiv) === 0) {
-      openNav()
-    }else {
+    if (mainDiv === 0) {
+      console.log("opened");
+      openNav();
+      mainDiv = 1;
+    }else{
       closeNav()
+      mainDiv = 0;
+      console.log("closed");
     }
   }
+
 function openNav() {
     document.getElementById("mySidenav").style.width = "400px";
     document.getElementById("main").style.marginLeft = "400px";
-    document.querySelector("#main").style.backgroundColor = "rgba(0,0,0,0.2)";
+    document.querySelector("#main").style.backgroundColor = "rgba(0,0,0,0.9)";
 
 }
 
