@@ -8,29 +8,34 @@
   </head>
 
   <body>
-    <bgsound src="http://vocaroo.com/i/s1uKbYFeurxay"/>
-    <div class="first">
-      <div class="menuContainer">
-        <div class="burgerContainer" onclick="openMenu(this)">
+    <div id="mySidenav" class="sidenav">
+      <a href="#">About Me</a>
+      <a href="#">Project #1: D-Ball <br> <img src="project1.png"></a>
+      <a href="#">Project #2: NYC Jobs <br> <img src="project2.png"></a>
+      <a href="#">Project #3: Blink <br> <img src="project3.png"></a>
+      <a href="#">Contact</a>
+    </div>
+    <!-- <span onclick="openNav()">open</span> -->
+    <div id="main">
+      <div class="menuContainer" onclick="openMenu(this)">
+        <div class="burgerContainer">
           <div class="burger" id="burger1"></div>
           <div class="burger" id="burger2"></div>
           <div class="burger" id="burger3"></div>
         </div>
         <span class="text">Menu</span>
       </div>
-    <div class="title">
-      <div class="fName">
-        <span id="letterJ">J</span>
-        <span id="letterI">I</span>
-        <span id="letterM">M</span>
-        <span id="letterMm">M</span>
-        <span id="letterY">Y</span>
-      </div>
-      <div class="lName">DE LOS ANGELES
+      <div class="title">
+        <div class="fName">
+          <span id="letterJ">J</span>
+          <span id="letterI">I</span>
+          <span id="letterM">M</span>
+          <span id="letterMm">M</span>
+          <span id="letterY">Y</span>
+        </div>
+        <div class="lName">DE LOS ANGELES</div>
       </div>
     </div>
-  </div>
-</body>
-
-<script src="script.js" charset="utf-8"></script>
+  </body>
+  <script src="script.js" charset="utf-8"></script>
 </html>

@@ -8,10 +8,6 @@
     return rgba;
   }
 
-  function openMenu(x){
-    x.classList.toggle("change");
-  }
-
   function flashingLights(){
     let temp = Math.floor(Math.random()*3);
     if(temp === 0){
@@ -25,7 +21,7 @@
 
   function widHeight(){
     num = Math.floor(Math.random()* 400);
-    if(num < 100){
+    if(num < 150){
       num = num + 200;
     }
     return num;
@@ -47,13 +43,6 @@
     this.style.opacity = "0";
   }
 
-  function removeNote(){
-    let parent = document.querySelector(".first");
-    let child = document.querySelector(".note");
-    parent.removeChild(child);
-  }
-
-  let n = 0;
   function makeBub(howMany){
     //create emement container here
     //for create bubbles
@@ -61,7 +50,7 @@
       let ranNum = widHeight();
       let newBubble = document.createElement("DIV")
       newBubble.className="focus focusFade";
-      newBubble.id = "bubble" + n;
+      newBubble.id = "bubble" + i;
       newBubble.style.backgroundColor = flashingLights();
       newBubble.style.height = ranNum + "px";
       newBubble.style.width = ranNum + "px";
@@ -71,14 +60,10 @@
       newBubble.addEventListener("mouseout", opacityWhole);
       newBubble.addEventListener("mouseover", opacityMinus);
       // append bubble container
-      document.querySelector(".first").appendChild(newBubble);
+      document.querySelector("#main").appendChild(newBubble);
       newBubble.focus();
       newBubble.className = "focus";
     }
-  }
-//after loop over append container to body
-  function showBubble(){
-    let bubbleID = document.querySelector("#bubble")
   }
 
   function makeJ(){
@@ -105,10 +90,33 @@
     let myName = document.querySelector(".lName");
     myName.style.opacity = "1";
   }
-makeBub(50)
+makeBub(40)
 setTimeout(makeJ, 5000)
 setTimeout(makeI, 5500)
 setTimeout(makeM, 6000)
 setTimeout(makeMm, 6500)
 setTimeout(makeY, 7000)
 setTimeout(makeLname, 8000)
+
+let mainDiv = document.getElementById("main").style.marginLeft;
+mainDiv = "0";
+  function openMenu(x){
+    x.classList.toggle("change");
+    if (parseInt(mainDiv) === 0) {
+      openNav()
+    }else {
+      closeNav()
+    }
+  }
+function openNav() {
+    document.getElementById("mySidenav").style.width = "400px";
+    document.getElementById("main").style.marginLeft = "400px";
+    document.querySelector("#main").style.backgroundColor = "rgba(0,0,0,0.2)";
+
+}
+
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+    document.getElementById("main").style.marginLeft = "0";
+    document.querySelector("#main").style.backgroundColor = "";
+}
