@@ -56,7 +56,7 @@
       newBubble.style.width = ranNum + "px";
       newBubble.style.top = yAxis() + "px";
       newBubble.style.left = xAxis() + "px";
-      newBubble.style.transitionDelay = `${i*0.2}s`
+      newBubble.style.transitionDelay = `${i*0.1}s`
       newBubble.addEventListener("mouseout", opacityWhole);
       newBubble.addEventListener("mouseover", opacityMinus);
       // append bubble container
@@ -91,23 +91,23 @@
     myName.style.opacity = "1";
   }
 makeBub(40)
-setTimeout(makeJ, 5000)
-setTimeout(makeI, 5500)
-setTimeout(makeM, 6000)
-setTimeout(makeMm, 6500)
-setTimeout(makeY, 7000)
-setTimeout(makeLname, 8000)
+setTimeout(makeJ, 1000)
+setTimeout(makeI, 1500)
+setTimeout(makeM, 2000)
+setTimeout(makeMm, 2500)
+setTimeout(makeY, 3000)
+setTimeout(makeLname, 4000)
 
-let mainDiv = 0;
+let open = 0;
   function openMenu(x){
     x.classList.toggle("change");
-    if (mainDiv === 0) {
+    if (open === 0) {
       console.log("opened");
       openNav();
-      mainDiv = 1;
+      open = 1;
     }else{
       closeNav()
-      mainDiv = 0;
+      open = 0;
       console.log("closed");
     }
   }
@@ -115,7 +115,7 @@ let mainDiv = 0;
 function openNav() {
     document.getElementById("mySidenav").style.width = "400px";
     document.getElementById("main").style.marginLeft = "400px";
-    document.querySelector("#main").style.backgroundColor = "rgba(0,0,0,0.9)";
+    document.querySelector("#main").style.backgroundColor = "rgba(0,0,0,1)";
 
 }
 

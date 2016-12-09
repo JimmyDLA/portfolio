@@ -11,7 +11,7 @@ font-family: 'Fredoka One', cursive;
     z-index: 1; /* Stay on top */
     top: 0;
     left: 0;
-    background-color: #111; /* Black*/
+    background-color: rgb(255,250,225); /* Black*/
     overflow-x: hidden; /* Disable horizontal scroll */
     padding-top: 60px; /* Place content 60px from the top */
     transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
@@ -22,14 +22,14 @@ font-family: 'Fredoka One', cursive;
     padding: 8px 8px 8px 32px;
     text-decoration: none;
     font-size: 25px;
-    color: #818181;
+    color: rgb(30, 30, 30);
     display: block;
     transition: 0.3s
 }
 
 /* When you mouse over the navigation links, change their color */
 .sidenav a:hover, .offcanvas a:focus{
-    color: #f1f1f1;
+    color: rgb(255, 255, 77);
 }
 
 /* Position and style the close button (top right corner) */
@@ -49,9 +49,8 @@ font-family: 'Fredoka One', cursive;
   justify-content: center;
   transition: margin-left .5s;
   padding: 20px;
-  position: relative;
   margin-left: 0;
-  background-color: '';
+  position: relative;
 }
 img{
   height: 150px;
@@ -125,6 +124,7 @@ opacity: 0;
   align-self: center;
   transition: opacity 2s;
   transition: color 2s;
+  position: relative;
 }
 
 .fName{
