@@ -113,14 +113,30 @@ let open = 0;
   }
 
 function openNav() {
-    document.getElementById("mySidenav").style.width = "400px";
-    document.getElementById("main").style.marginLeft = "400px";
-    document.querySelector("#main").style.backgroundColor = "rgba(0,0,0,1)";
+  document.querySelector(".mainNav").style.width = "90vw";
+  document.querySelector(".mainNav").style.height = "80vh";
+  document.querySelector(".mainNav").style.zIndex = "3";
+  document.querySelector(".mainNav").style.display = "block";
+  document.querySelector(".mainNav").style.top = "10vh";
+  document.querySelector(".mainNav").style.left = "5vw";
+  document.querySelector(".title").style.opacity = "0";
+
+
+  // document.querySelector(".mainNav").style.zIndex = "2";
+    // document.getElementById("mySidenav").style.width = "400px";
+    // document.querySelector(".menuContainer").style.marginLeft = "400px";
+    // document.querySelector("#main").style.backgroundColor = "rgba(0,0,0,1)";
 
 }
 
 function closeNav() {
-    document.getElementById("mySidenav").style.width = "0";
-    document.getElementById("main").style.marginLeft = "0";
-    document.querySelector("#main").style.backgroundColor = "";
+  document.querySelector(".mainNav").style.zIndex = "0";
+  document.querySelector(".mainNav").style.display = "none";
+  document.querySelector(".mainNav").style.left = "5vw";
+  document.querySelector(".title").style.opacity = "1";
+
+
+    // document.getElementById("mySidenav").style.width = "0";
+    // document.querySelector(".menuContainer").style.marginLeft = "0";
+    // document.querySelector("#main").style.backgroundColor = "";
 }

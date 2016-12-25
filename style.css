@@ -1,6 +1,21 @@
 html{
 background-color: rgb(30, 30, 30);
-font-family: 'Fredoka One', cursive;
+
+
+}
+.mainNav{
+  height: 0vh;
+  width: 0vw;
+  background: rgba(0,0,0,0.6);
+  /*background: linear-gradient(to right, rgb(2,78,116) , black);*/
+  /*background: linear-gradient(top, rgb(2,78,116) 0%, rgb(0,2,3) 50%, rgb(0,2,3) 100%);*/
+  transition: 4s;
+  z-index: 0;
+  display: none;
+  position: absolute;
+  top: 50vh;
+  left: 50vw;
+  border-radius: 10px;
 
 }
 /* The side navigation menu */
@@ -8,10 +23,10 @@ font-family: 'Fredoka One', cursive;
     height: 100%; /* 100% Full-height */
     width: 0; /* 0 width - change this with JavaScript */
     position: fixed; /* Stay in place */
-    z-index: 1; /* Stay on top */
+    z-index: 2; /* Stay on top */
     top: 0;
     left: 0;
-    background-color: rgb(255,250,225); /* Black*/
+    background-color: rgba(30,30,35, 0.7); /* Black*/
     overflow-x: hidden; /* Disable horizontal scroll */
     padding-top: 60px; /* Place content 60px from the top */
     transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
@@ -22,14 +37,14 @@ font-family: 'Fredoka One', cursive;
     padding: 8px 8px 8px 32px;
     text-decoration: none;
     font-size: 25px;
-    color: rgb(30, 30, 30);
+    color: rgb(150, 150, 150);
     display: block;
     transition: 0.3s
 }
 
 /* When you mouse over the navigation links, change their color */
 .sidenav a:hover, .offcanvas a:focus{
-    color: rgb(255, 255, 77);
+    color: rgb(187,82,16);
 }
 
 /* Position and style the close button (top right corner) */
@@ -77,6 +92,7 @@ img{
   position: absolute;
   left: 20px;
   top: 10px;
+  z-index: 2;
 }
 .burgerContainer{
   display: inline-block;
@@ -125,10 +141,13 @@ opacity: 0;
   transition: opacity 2s;
   transition: color 2s;
   position: relative;
+  z-index: 1;
+  font-family: 'Roboto', sans-serif;
+
 }
 
 .fName{
-  padding-left: 100px;
+  padding-left:90px;
   font-size: 80px;
   margin-bottom: -15px;
   transition: opacity 2s;
