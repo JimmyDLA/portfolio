@@ -22,18 +22,24 @@ a:hover{
   height: 0vh;
   width: 0vw;
   background: rgba(0,0,0,0.4);
-  transition: 4s;
+  transition: 0.3s;
   z-index: 0;
-  display: none;
+  display: flex;
   position: absolute;
   top: 50vh;
   left: 50vw;
   border-radius: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+.insideMenu{
+  display: none;
   flex-direction: column;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  transition:  2s;
+
 }
 
 .projects{

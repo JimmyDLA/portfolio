@@ -113,13 +113,15 @@ let open = 0;
   }
 
 function openNav() {
+  // document.querySelector(".mainNav").style.display = "flex";
   document.querySelector(".mainNav").style.width = "98vw";
   document.querySelector(".mainNav").style.height = "95vh";
   document.querySelector(".mainNav").style.zIndex = "3";
-  document.querySelector(".mainNav").style.display = "flex";
   document.querySelector(".mainNav").style.top = "2vh";
   document.querySelector(".mainNav").style.left = "1vw";
   document.querySelector(".title").style.opacity = "0";
+  document.querySelector(".insideMenu").style.display = "flex";
+
 
 
   // document.querySelector(".mainNav").style.zIndex = "2";
@@ -130,10 +132,13 @@ function openNav() {
 }
 
 function closeNav() {
+  document.querySelector(".mainNav").style.width = "0vw";
+  document.querySelector(".mainNav").style.height = "0vh";
   document.querySelector(".mainNav").style.zIndex = "0";
-  document.querySelector(".mainNav").style.display = "none";
-  document.querySelector(".mainNav").style.left = "5vw";
+  document.querySelector(".insideMenu").style.display = "none";
   document.querySelector(".title").style.opacity = "1";
+  document.querySelector(".mainNav").style.top = "50vh";
+  document.querySelector(".mainNav").style.left = "50vw";
 
 
     // document.getElementById("mySidenav").style.width = "0";
