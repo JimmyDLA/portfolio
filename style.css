@@ -1,14 +1,27 @@
 html{
 background-color: rgb(30, 30, 30);
+}
 
-
+a{
+  text-align: center;
+  color: rgb(80, 80, 80);
+  text-decoration: none;
+  transition: 0.3s;
+}
+a:hover{
+  color: rgb(255, 219, 77);
+}
+@keyframes largeMenu {
+    0%   {width: 0vw;}
+    25%  {width: 50vw;}
+    50%  {width: 90vw;}
+    75%  {width: 80vw;}
+    100% {width: 98vw;}
 }
 .mainNav{
   height: 0vh;
   width: 0vw;
-  background: rgba(0,0,0,0.6);
-  /*background: linear-gradient(to right, rgb(2,78,116) , black);*/
-  /*background: linear-gradient(top, rgb(2,78,116) 0%, rgb(0,2,3) 50%, rgb(0,2,3) 100%);*/
+  background: rgba(0,0,0,0.4);
   transition: 4s;
   z-index: 0;
   display: none;
@@ -16,7 +29,19 @@ background-color: rgb(30, 30, 30);
   top: 50vh;
   left: 50vw;
   border-radius: 10px;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  transition:  2s;
+}
 
+.projects{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 1150px;
+  justify-content: space-between;
 }
 /* The side navigation menu */
 .sidenav {
@@ -92,7 +117,7 @@ img{
   position: absolute;
   left: 20px;
   top: 10px;
-  z-index: 2;
+  z-index: 4;
 }
 .burgerContainer{
   display: inline-block;
@@ -143,14 +168,16 @@ opacity: 0;
   position: relative;
   z-index: 1;
   font-family: 'Roboto', sans-serif;
-
+  /*font-size: 40px;*/
 }
 
 .fName{
-  padding-left:90px;
+  padding-left: 50px;
   font-size: 80px;
   margin-bottom: -15px;
   transition: opacity 2s;
+  font-size: 100px;
+
 }
 .lName{
   font-size: 55px;

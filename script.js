@@ -113,12 +113,12 @@ let open = 0;
   }
 
 function openNav() {
-  document.querySelector(".mainNav").style.width = "90vw";
-  document.querySelector(".mainNav").style.height = "80vh";
+  document.querySelector(".mainNav").style.width = "98vw";
+  document.querySelector(".mainNav").style.height = "95vh";
   document.querySelector(".mainNav").style.zIndex = "3";
-  document.querySelector(".mainNav").style.display = "block";
-  document.querySelector(".mainNav").style.top = "10vh";
-  document.querySelector(".mainNav").style.left = "5vw";
+  document.querySelector(".mainNav").style.display = "flex";
+  document.querySelector(".mainNav").style.top = "2vh";
+  document.querySelector(".mainNav").style.left = "1vw";
   document.querySelector(".title").style.opacity = "0";
 
 
