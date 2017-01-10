@@ -113,7 +113,6 @@ let open = 0;
   }
 
 function openNav() {
-  // document.querySelector(".mainNav").style.display = "flex";
   document.querySelector(".mainNav").style.width = "98vw";
   document.querySelector(".mainNav").style.height = "95vh";
   document.querySelector(".mainNav").style.zIndex = "3";
@@ -121,14 +120,6 @@ function openNav() {
   document.querySelector(".mainNav").style.left = "1vw";
   document.querySelector(".title").style.opacity = "0";
   document.querySelector(".insideMenu").style.display = "flex";
-
-
-
-  // document.querySelector(".mainNav").style.zIndex = "2";
-    // document.getElementById("mySidenav").style.width = "400px";
-    // document.querySelector(".menuContainer").style.marginLeft = "400px";
-    // document.querySelector("#main").style.backgroundColor = "rgba(0,0,0,1)";
-
 }
 
 function closeNav() {
@@ -140,8 +131,4 @@ function closeNav() {
   document.querySelector(".mainNav").style.top = "50vh";
   document.querySelector(".mainNav").style.left = "50vw";
 
-
-    // document.getElementById("mySidenav").style.width = "0";
-    // document.querySelector(".menuContainer").style.marginLeft = "0";
-    // document.querySelector("#main").style.backgroundColor = "";
 }
