@@ -1,16 +1,55 @@
 html{
-background-color: rgb(30, 30, 30);
+background-color: rgb(40, 40, 40);
 }
 
 a{
   text-align: center;
-  color: rgb(80, 80, 80);
+  color: rgb(200, 200, 200);
   text-decoration: none;
   transition: 0.3s;
 }
 a:hover{
   color: rgb(255, 219, 77);
 }
+.projImg1{
+  background-image: url("project1.png");
+  background-size: cover;
+  height: 150px;
+  width: 250px;
+}.projImg2{
+  background-image: url("project2.png");
+  background-size: cover;
+  height: 150px;
+  width: 250px;
+}.projImg3{
+  background-image: url("project3.png");
+  background-size: cover;
+  height: 150px;
+  width: 250px;
+}.projImg4{
+  background-image: url("project4.png");
+  background-size: cover;
+  height: 150px;
+  width: 250px;
+}
+.projShade{
+  position:relative;
+  top: 100px;
+  background-color: rgba(0, 0, 0, 0.6);
+  height: 50px;
+  width: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+/*h3{
+}*/
+/*h3 span{
+  color: rgb(200, 200, 200);
+  background-color: rgba(0, 0, 0, 0.5);
+  height: 100px;
+  width: 250px;
+}*/
 @keyframes largeMenu {
     0%   {width: 0vw;}
     25%  {width: 50vw;}
@@ -21,7 +60,7 @@ a:hover{
 .mainNav{
   height: 0vh;
   width: 0vw;
-  background: rgba(0,0,0,0.4);
+  background: rgba(0,0,0,0.3);
   transition: 0.3s;
   z-index: 0;
   display: flex;
