@@ -113,7 +113,7 @@ let open = 0;
   }
 
 function openNav() {
-  document.querySelector(".mainNav").style.width = "98vw";
+  document.querySelector(".mainNav").style.width = "97vw";
   document.querySelector(".mainNav").style.height = "95vh";
   document.querySelector(".mainNav").style.zIndex = "3";
   document.querySelector(".mainNav").style.top = "2vh";

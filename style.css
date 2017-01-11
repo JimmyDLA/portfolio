@@ -12,27 +12,32 @@ a:hover{
   color: rgb(255, 219, 77);
 }
 .projImg1{
+  border-radius: 5px;
   background-image: url("project1.png");
   background-size: cover;
   height: 150px;
   width: 250px;
 }.projImg2{
+  border-radius: 5px;
   background-image: url("project2.png");
   background-size: cover;
   height: 150px;
   width: 250px;
 }.projImg3{
+  border-radius: 5px;
   background-image: url("project3.png");
   background-size: cover;
   height: 150px;
   width: 250px;
 }.projImg4{
+  border-radius: 5px;
   background-image: url("project4.png");
   background-size: cover;
   height: 150px;
   width: 250px;
 }
 .projShade{
+  border-radius: 5px;
   position:relative;
   top: 100px;
   background-color: rgba(0, 0, 0, 0.6);
@@ -206,13 +211,16 @@ img{
 opacity: 0;
 }
 .title{
+  margin-top: -50px;
   color: rgb(255, 219, 77);
   align-self: center;
   transition: opacity 2s;
   transition: color 2s;
   position: relative;
   z-index: 1;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Bungee Shade', cursive;
+
+  /*font-family: 'Roboto', sans-serif;*/
   /*font-size: 40px;*/
 }
 
@@ -226,7 +234,7 @@ opacity: 0;
 }
 .lName{
   font-size: 55px;
-  margin-top: -25px;
+  margin-top: -110px;
   opacity: 0;
   transition: opacity 2s;
   }
