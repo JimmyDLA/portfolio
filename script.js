@@ -120,6 +120,7 @@ function openNav() {
   document.querySelector(".mainNav").style.left = "1vw";
   document.querySelector(".title").style.opacity = "0";
   document.querySelector(".insideMenu").style.display = "flex";
+  document.querySelector(".text").style.opacity = "0";
 }
 
 function closeNav() {
@@ -130,5 +131,5 @@ function closeNav() {
   document.querySelector(".title").style.opacity = "1";
   document.querySelector(".mainNav").style.top = "50vh";
   document.querySelector(".mainNav").style.left = "50vw";
-
+  document.querySelector(".text").style.opacity = "1";
 }
