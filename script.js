@@ -109,15 +109,35 @@ setTimeout(makeWebDev, 4500)
 // THIS IS TO OPEN ABOUT
 let aboutOpen = 0;
   function openAbout(x){
-    if (aboutOpen === 0) {
-      console.log("opened about");
-      openAboutNav();
-      aboutOpen = 1;
-      console.log(aboutOpen);
-    }else{
-      closeAboutNav()
-      aboutOpen = 0;
-      console.log("closed about");
+    if((contactOpen === 0 ) && (projectOpen === 0)){
+      if (aboutOpen === 0) {
+        openAboutNav();
+        aboutOpen = 1;
+        console.log("opened about");
+        console.log(aboutOpen);
+      }else{
+        closeAboutNav()
+        aboutOpen = 0;
+        console.log("closed about");
+        console.log(aboutOpen);
+      }
+    }
+    if((contactOpen === 1) || (projectOpen === 1)){
+      closeContactNav();
+      closeProjectNav();
+      contactOpen = 0;
+      projectOpen = 0;
+      if (aboutOpen === 0) {
+        openAboutNav();
+        aboutOpen = 1;
+        console.log("opened about");
+        console.log(aboutOpen);
+      }else{
+        closeAboutNav()
+        aboutOpen = 0;
+        console.log("closed about");
+        console.log(aboutOpen);
+      }
     }
   }
 
@@ -144,15 +164,35 @@ let aboutOpen = 0;
 // THIS IS TO OPEN CONTACT
 let contactOpen = 0;
   function openContact(x){
-    if (contactOpen === 0) {
-      console.log("opened contact");
-      openContactNav();
-      contactOpen = 1;
-      console.log(contactOpen);
-    }else{
-      closeContactNav()
-      contactOpen = 0;
-      console.log("closed contact");
+    if((aboutOpen === 0 ) && (projectOpen === 0)){
+      if (contactOpen === 0) {
+        openContactNav();
+        contactOpen = 1;
+        console.log("opened contact");
+        console.log(contactOpen);
+      }else{
+        closeContactNav()
+        contactOpen = 0;
+        console.log("closed contact");
+        console.log(contactOpen);
+      }
+    }
+    if((aboutOpen === 1) || (projectOpen === 1)){
+      closeAboutNav();
+      closeProjectNav();
+      aboutOpen = 0;
+      projectOpen = 0;
+      if (contactOpen === 0) {
+        openContactNav();
+        contactOpen = 1;
+        console.log("opened contact");
+        console.log(contactOpen);
+      }else{
+        closeContactNav()
+        contactOpen = 0;
+        console.log("closed contact");
+        console.log(contactOpen);
+      }
     }
   }
 
@@ -179,15 +219,35 @@ let contactOpen = 0;
   //THIS IS TO OPEN PROJECTS
   let projectOpen = 0;
     function openProject(x){
-      if (projectOpen === 0) {
-        console.log("opened");
-        openProjectNav();
-        projectOpen = 1;
-        console.log(projectOpen);
-      }else{
-        closeProjectNav()
-        projectOpen = 0;
-        console.log("closed");
+      if((aboutOpen === 0 ) && (contactOpen === 0)){
+        if (projectOpen === 0) {
+          openProjectNav();
+          projectOpen = 1;
+          console.log("opened project");
+          console.log(projectOpen);
+        }else{
+          closeProjectNav()
+          projectOpen = 0;
+          console.log("closed project");
+          console.log(projectOpen);
+        }
+      }
+      if((aboutOpen === 1) || (contactOpen === 1)){
+        closeContactNav();
+        closeAboutNav();
+        aboutOpen = 0;
+        contactOpen = 0;
+        if (projectOpen === 0) {
+          openProjectNav();
+          projectOpen = 1;
+          console.log("opened project");
+          console.log(projectOpen);
+        }else{
+          closeProjectNav()
+          projectOpen = 0;
+          console.log("closed project");
+          console.log(projectOpen);
+        }
       }
     }
 
