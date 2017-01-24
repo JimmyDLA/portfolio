@@ -3,14 +3,26 @@
   <head>
     <meta charset="utf-8">
     <title>Portfolio</title>
-    <link href="https://fonts.googleapis.com/css?family=Bungee+Shade|Oswald" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Roboto:900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Bungee+Shade|Catamaran:900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Heebo:800" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Fredoka+One" rel="stylesheet">
     <link rel="stylesheet" href="style.css" media="screen" title="no title">
   </head>
 
   <body>
+    <header>
+      <div class="homeLogo">
+        JDLA LOGO
+      </div>
+      <ul>
+        <li><a href="#" >About</a></li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="#" onclick="openMenu(this)">Projects</a></li>
+        <li><a href="#">Resume</a></li>
+      </ul>
+    </header>
     <div id="main">
+      <!--
       <div class="menuContainer" onclick="openMenu(this)">
         <div class="burgerContainer">
           <div class="burger" id="burger1"></div>
@@ -18,7 +30,7 @@
           <div class="burger" id="burger3"></div>
         </div>
         <span class="text">Menu</span>
-      </div>
+      </div> -->
       <div class="title">
         <div class="fName">
           <span id="letterJ">J</span>
@@ -30,12 +42,13 @@
         <div class="lName">
           DE LOS ANGELES
         </div>
+        <div class="webDev">
+          Web Developer
+        </div>
       </div>
     </div>
     <div class="mainNav">
       <div class="insideMenu">
-        <a id="" href="#"><h1>About Me</h1></a>
-        <a id="" href="#"><h1>Projects:</h1></a>
         <div class="projects">
           <a id="" href="#" target="_blank">
             <div class="projImg1">
@@ -66,7 +79,22 @@
             </div>
           </a>
         </div>
-        <a id="" href="#"><h1>Contact</h1></a>
+        <div class="aboutMePage">
+          <div class="columnContainer">
+            <div class="column1">
+              <h2>Something about DR</h2>
+              <img id="DomRep" src="DomRepBeach.jpg" alt="DomRep">
+            </div>
+            <div class="column2">
+              <img id="myPic" src="" alt="me">
+              <h2>Something about me </h2>
+            </div>
+            <div class="column3">
+              <h2>Something about ny</h2>
+              <img id="qns" src="QnsGlobe.jpg" alt="Queens">
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </body>

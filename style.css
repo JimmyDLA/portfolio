@@ -2,8 +2,35 @@ html{
 background-color: rgb(40, 40, 40);
 }
 
+header{
+  width: 95vw;
+  height: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.homeLogo{
+  margin-top: 20px;
+  margin-left: 20px;
+  background-color: white;
+  height: 60px;
+  width: 120px;
+}
+ul{
+  list-style-type: none;
+  color: white;
+  display: flex;
+  justify-content: space-around;
+  width: 500px;
+}
+li{
+  display: inline;
+  font-size: 30px;
+  z-index: 4;
+}
+
 a{
-  text-align: center;
   color: rgb(200, 200, 200);
   text-decoration: none;
   transition: 0.3s;
@@ -17,19 +44,22 @@ a:hover{
   background-size: cover;
   height: 150px;
   width: 250px;
-}.projImg2{
+}
+.projImg2{
   border-radius: 5px;
   background-image: url("project2.png");
   background-size: cover;
   height: 150px;
   width: 250px;
-}.projImg3{
+}
+.projImg3{
   border-radius: 5px;
   background-image: url("project3.png");
   background-size: cover;
   height: 150px;
   width: 250px;
-}.projImg4{
+}
+.projImg4{
   border-radius: 5px;
   background-image: url("project4.png");
   background-size: cover;
@@ -92,43 +122,6 @@ a:hover{
   flex-wrap: wrap;
   width: 1150px;
   justify-content: space-between;
-}
-/* The side navigation menu */
-.sidenav {
-    height: 100%; /* 100% Full-height */
-    width: 0; /* 0 width - change this with JavaScript */
-    position: fixed; /* Stay in place */
-    z-index: 2; /* Stay on top */
-    top: 0;
-    left: 0;
-    background-color: rgba(30,30,35, 0.7); /* Black*/
-    overflow-x: hidden; /* Disable horizontal scroll */
-    padding-top: 60px; /* Place content 60px from the top */
-    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
-}
-
-/* The navigation menu links */
-.sidenav a {
-    padding: 8px 8px 8px 32px;
-    text-decoration: none;
-    font-size: 25px;
-    color: rgb(150, 150, 150);
-    display: block;
-    transition: 0.3s
-}
-
-/* When you mouse over the navigation links, change their color */
-.sidenav a:hover, .offcanvas a:focus{
-    color: rgb(187,82,16);
-}
-
-/* Position and style the close button (top right corner) */
-.sidenav .closebtn {
-    position: absolute;
-    top: 0;
-    right: 25px;
-    font-size: 36px;
-    margin-left: 50px;
 }
 
 /* Style page content - use this if you want to push the page content to the right when you open the side navigation */
@@ -264,4 +257,17 @@ margin-right: -20px;
 #letterY{
 transition: opacity 2s;
 opacity: 0;
+}
+
+.webDev{
+  font-family: 'Heebo', sans-serif;
+  opacity: 0;
+  transition: opacity 2s;
+  font-size: 40px;
+  padding-left: 150px;
+  /*margin-top: -0px;*/
+}
+
+.aboutMePage{
+  display: none;
 }

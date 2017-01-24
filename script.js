@@ -90,6 +90,10 @@
     let myName = document.querySelector(".lName");
     myName.style.opacity = "1";
   }
+  function makeWebDev(){
+    let myName = document.querySelector(".webDev");
+    myName.style.opacity = "1";
+  }
 makeBub(40)
 setTimeout(makeJ, 1000)
 setTimeout(makeI, 1500)
@@ -97,6 +101,7 @@ setTimeout(makeM, 2000)
 setTimeout(makeMm, 2500)
 setTimeout(makeY, 3000)
 setTimeout(makeLname, 4000)
+setTimeout(makeWebDev, 4500)
 
 let open = 0;
   function openMenu(x){
