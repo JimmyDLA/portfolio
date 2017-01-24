@@ -110,6 +110,7 @@ let open = 0;
       console.log("opened");
       openNav();
       open = 1;
+      console.log(open);
     }else{
       closeNav()
       open = 0;
@@ -118,23 +119,21 @@ let open = 0;
   }
 
 function openNav() {
-  document.querySelector(".mainNav").style.width = "97vw";
-  document.querySelector(".mainNav").style.height = "95vh";
-  document.querySelector(".mainNav").style.zIndex = "3";
-  document.querySelector(".mainNav").style.top = "2vh";
-  document.querySelector(".mainNav").style.left = "1vw";
+  document.querySelector(".projNav").style.width = "97vw";
+  document.querySelector(".projNav").style.height = "95vh";
+  document.querySelector(".projNav").style.zIndex = "3";
+  document.querySelector(".projNav").style.top = "2vh";
+  document.querySelector(".projNav").style.left = "1vw";
   document.querySelector(".title").style.opacity = "0";
   document.querySelector(".insideMenu").style.display = "flex";
-  document.querySelector(".text").style.opacity = "0";
 }
 
 function closeNav() {
-  document.querySelector(".mainNav").style.width = "0vw";
-  document.querySelector(".mainNav").style.height = "0vh";
-  document.querySelector(".mainNav").style.zIndex = "0";
+  document.querySelector(".projNav").style.width = "0vw";
+  document.querySelector(".projNav").style.height = "0vh";
+  document.querySelector(".projNav").style.zIndex = "0";
   document.querySelector(".insideMenu").style.display = "none";
   document.querySelector(".title").style.opacity = "1";
-  document.querySelector(".mainNav").style.top = "50vh";
-  document.querySelector(".mainNav").style.left = "50vw";
-  document.querySelector(".text").style.opacity = "1";
+  document.querySelector(".projNav").style.top = "50vh";
+  document.querySelector(".projNav").style.left = "50vw";
 }

@@ -16,6 +16,7 @@ header{
   background-color: white;
   height: 60px;
   width: 120px;
+  z-index: 4;
 }
 ul{
   list-style-type: none;
@@ -92,7 +93,7 @@ a:hover{
     75%  {width: 80vw;}
     100% {width: 98vw;}
 }
-.mainNav{
+.projNav{
   height: 0vh;
   width: 0vw;
   background: rgba(0,0,0,0.3);
