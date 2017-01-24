@@ -59,7 +59,6 @@
       newBubble.style.transitionDelay = `${i*0.1}s`
       newBubble.addEventListener("mouseout", opacityWhole);
       newBubble.addEventListener("mouseover", opacityMinus);
-      // append bubble container
       document.querySelector("#main").appendChild(newBubble);
       newBubble.focus();
       newBubble.className = "focus";
@@ -94,7 +93,11 @@
     let myName = document.querySelector(".webDev");
     myName.style.opacity = "1";
   }
+
+  // THIS IS TO MAKE HOW MANY BUBBLES
 makeBub(40)
+
+// THIS IS TO FADE IN NAME AND TITLE
 setTimeout(makeJ, 1000)
 setTimeout(makeI, 1500)
 setTimeout(makeM, 2000)
@@ -103,37 +106,107 @@ setTimeout(makeY, 3000)
 setTimeout(makeLname, 4000)
 setTimeout(makeWebDev, 4500)
 
-let open = 0;
-  function openMenu(x){
-    x.classList.toggle("change");
-    if (open === 0) {
-      console.log("opened");
-      openNav();
-      open = 1;
-      console.log(open);
+// THIS IS TO OPEN ABOUT
+let aboutOpen = 0;
+  function openAbout(x){
+    if (aboutOpen === 0) {
+      console.log("opened about");
+      openAboutNav();
+      aboutOpen = 1;
+      console.log(aboutOpen);
     }else{
-      closeNav()
-      open = 0;
-      console.log("closed");
+      closeAboutNav()
+      aboutOpen = 0;
+      console.log("closed about");
     }
   }
 
-function openNav() {
+  function openAboutNav() {
+    document.querySelector(".aboutNav").style.width = "97vw";
+    document.querySelector(".aboutNav").style.height = "95vh";
+    document.querySelector(".aboutNav").style.zIndex = "3";
+    document.querySelector(".aboutNav").style.top = "2vh";
+    document.querySelector(".aboutNav").style.left = "1vw";
+    document.querySelector(".insideAbout").style.display = "flex";
+    document.querySelector(".title").style.opacity = "0";
+  }
+
+  function closeAboutNav() {
+    document.querySelector(".aboutNav").style.width = "0vw";
+    document.querySelector(".aboutNav").style.height = "0vh";
+    document.querySelector(".aboutNav").style.zIndex = "0";
+    document.querySelector(".aboutNav").style.top = "50vh";
+    document.querySelector(".aboutNav").style.left = "50vw";
+    document.querySelector(".insideAbout").style.display = "none";
+    document.querySelector(".title").style.opacity = "1";
+  }
+
+// THIS IS TO OPEN CONTACT
+let contactOpen = 0;
+  function openContact(x){
+    if (contactOpen === 0) {
+      console.log("opened contact");
+      openContactNav();
+      contactOpen = 1;
+      console.log(contactOpen);
+    }else{
+      closeContactNav()
+      contactOpen = 0;
+      console.log("closed contact");
+    }
+  }
+
+  function openContactNav() {
+    document.querySelector(".contNav").style.width = "97vw";
+    document.querySelector(".contNav").style.height = "95vh";
+    document.querySelector(".contNav").style.zIndex = "3";
+    document.querySelector(".contNav").style.top = "2vh";
+    document.querySelector(".contNav").style.left = "1vw";
+    document.querySelector(".insideCont").style.display = "flex";
+    document.querySelector(".title").style.opacity = "0";
+  }
+
+  function closeContactNav() {
+    document.querySelector(".contNav").style.width = "0vw";
+    document.querySelector(".contNav").style.height = "0vh";
+    document.querySelector(".contNav").style.zIndex = "0";
+    document.querySelector(".contNav").style.top = "50vh";
+    document.querySelector(".contNav").style.left = "50vw";
+    document.querySelector(".insideCont").style.display = "none";
+    document.querySelector(".title").style.opacity = "1";
+  }
+
+  //THIS IS TO OPEN PROJECTS
+  let projectOpen = 0;
+    function openProject(x){
+      if (projectOpen === 0) {
+        console.log("opened");
+        openProjectNav();
+        projectOpen = 1;
+        console.log(projectOpen);
+      }else{
+        closeProjectNav()
+        projectOpen = 0;
+        console.log("closed");
+      }
+    }
+
+function openProjectNav() {
   document.querySelector(".projNav").style.width = "97vw";
   document.querySelector(".projNav").style.height = "95vh";
   document.querySelector(".projNav").style.zIndex = "3";
   document.querySelector(".projNav").style.top = "2vh";
   document.querySelector(".projNav").style.left = "1vw";
   document.querySelector(".title").style.opacity = "0";
-  document.querySelector(".insideMenu").style.display = "flex";
+  document.querySelector(".insideProj").style.display = "flex";
 }
 
-function closeNav() {
+function closeProjectNav() {
   document.querySelector(".projNav").style.width = "0vw";
   document.querySelector(".projNav").style.height = "0vh";
   document.querySelector(".projNav").style.zIndex = "0";
-  document.querySelector(".insideMenu").style.display = "none";
-  document.querySelector(".title").style.opacity = "1";
   document.querySelector(".projNav").style.top = "50vh";
   document.querySelector(".projNav").style.left = "50vw";
+  document.querySelector(".title").style.opacity = "1";
+  document.querySelector(".insideProj").style.display = "none";
 }

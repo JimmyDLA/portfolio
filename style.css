@@ -78,26 +78,40 @@ a:hover{
   flex-direction: column;
   justify-content: space-around;
 }
-/*h3{
-}*/
-/*h3 span{
-  color: rgb(200, 200, 200);
-  background-color: rgba(0, 0, 0, 0.5);
-  height: 100px;
-  width: 250px;
-}*/
-@keyframes largeMenu {
-    0%   {width: 0vw;}
-    25%  {width: 50vw;}
-    50%  {width: 90vw;}
-    75%  {width: 80vw;}
-    100% {width: 98vw;}
+
+.aboutNav{
+  height: 0vh;
+  width: 0vw;
+  background: rgba(0,0,0,0.3);
+  transition: 0.5s;
+  z-index: 0;
+  display: flex;
+  position: absolute;
+  top: 50vh;
+  left: 50vw;
+  border-radius: 10px;
+  justify-content: center;
+  align-items: center;
+}
+.contNav{
+  height: 0vh;
+  width: 0vw;
+  background: rgba(0,0,0,0.3);
+  transition: 0.5s;
+  z-index: 0;
+  display: flex;
+  position: absolute;
+  top: 50vh;
+  left: 50vw;
+  border-radius: 10px;
+  justify-content: center;
+  align-items: center;
 }
 .projNav{
   height: 0vh;
   width: 0vw;
   background: rgba(0,0,0,0.3);
-  transition: 0.3s;
+  transition: 0.5s;
   z-index: 0;
   display: flex;
   position: absolute;
@@ -108,13 +122,26 @@ a:hover{
   align-items: center;
 }
 
-.insideMenu{
+.insideAbout{
   display: none;
   flex-direction: column;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-
+}
+.insideCont{
+  display: none;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.insideProj{
+  display: none;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
 }
 
 .projects{
@@ -125,7 +152,6 @@ a:hover{
   justify-content: space-between;
 }
 
-/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
 #main {
   height: 100vh;
   width: 100vw;
@@ -204,6 +230,7 @@ img{
 .focusFade{
 opacity: 0;
 }
+
 .title{
   margin-top: -50px;
   color: rgb(255, 219, 77);
@@ -213,9 +240,6 @@ opacity: 0;
   position: relative;
   z-index: 1;
   font-family: 'Bungee Shade', cursive;
-
-  /*font-family: 'Roboto', sans-serif;*/
-  /*font-size: 40px;*/
 }
 
 .fName{
@@ -266,9 +290,4 @@ opacity: 0;
   transition: opacity 2s;
   font-size: 40px;
   padding-left: 150px;
-  /*margin-top: -0px;*/
-}
-
-.aboutMePage{
-  display: none;
 }
