@@ -145,7 +145,7 @@ a:hover{
   align-items: center;
 }
 .insideCont{
-  color: white;
+  color: rgb(200,200,200);
   display: none;
   flex-direction: column;
   flex-wrap: wrap;
@@ -287,7 +287,7 @@ opacity: 0;
 }
 
 .title{
-  margin-top: -50px;
+  margin-top: -150px;
   color: rgb(255, 219, 77);
   align-self: center;
   transition: opacity 2s;
@@ -345,4 +345,57 @@ opacity: 0;
   transition: opacity 2s;
   font-size: 40px;
   padding-left: 150px;
+}
+
+.containerForm{
+  display: flex;
+  flex-direction: row;
+  height: 20vh;
+  width: 40vw;
+  justify-content: center;
+  justify-content: space-between;
+}
+.leftForm{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+#inputName{
+  height: 5vh;
+  width: 18vw;
+  border-radius: 10px;
+  font-size: 15px;
+}
+#inputEmail{
+  font-size: 15px;
+  height: 5vh;
+  width: 18vw;
+  border-radius: 10px;
+}
+#inputSubject{
+  height: 5vh;
+  width: 18vw;
+  border-radius: 10px;
+  font-size: 15px;
+}
+#inputMessage{
+  height: 20vh;
+  width: 20vw;
+  border-radius: 10px;
+  border: solid 2px rgb(200, 200, 200);
+  font-size: 15px;
+}
+#inputSubmit{
+  margin-top: 20px;
+  color: white;
+  background: rgb(200,0,0);
+  cursor: pointer;
+  border: none;
+  height: 5vh;
+  width: 40vw;
+  border-radius: 10px;
+  font-size: 20px;
+}
+#inputSubmit:hover{
+  background-color: rgb(255,20,20);
 }
