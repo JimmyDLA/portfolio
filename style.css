@@ -1,5 +1,7 @@
 html{
 background-color: rgb(40, 40, 40);
+font-family: 'Heebo', sans-serif;
+
 }
 
 header{
@@ -39,33 +41,45 @@ a{
 a:hover{
   color: rgb(255, 219, 77);
 }
+#proj1{
+  margin-left: 50px;
+}
+#proj2{
+  margin-right: 50px;
+}
+#proj3{
+  margin-left: 50px;
+}
+#proj4{
+  margin-right: 50px;
+}
 .projImg1{
   border-radius: 5px;
-  background-image: url("project1.png");
+  background-image: url("./public/project1.png");
   background-size: cover;
-  height: 150px;
-  width: 250px;
+  height: 225px;
+  width: 375px;
 }
 .projImg2{
   border-radius: 5px;
-  background-image: url("project2.png");
+  background-image: url("./public/project2.png");
   background-size: cover;
-  height: 150px;
-  width: 250px;
+  height: 225px;
+  width: 375px;
 }
 .projImg3{
   border-radius: 5px;
-  background-image: url("project3.png");
+  background-image: url("./public/project3.png");
   background-size: cover;
-  height: 150px;
-  width: 250px;
+  height: 225px;
+  width: 375px;
 }
 .projImg4{
   border-radius: 5px;
-  background-image: url("project4.png");
+  background-image: url("./public/project4.png");
   background-size: cover;
-  height: 150px;
-  width: 250px;
+  height: 225px;
+  width: 375px;
 }
 .projShade{
   border-radius: 5px;
@@ -123,6 +137,7 @@ a:hover{
 }
 
 .insideAbout{
+  color: rgb(200, 200, 200);
   display: none;
   flex-direction: column;
   flex-wrap: wrap;
@@ -130,6 +145,7 @@ a:hover{
   align-items: center;
 }
 .insideCont{
+  color: white;
   display: none;
   flex-direction: column;
   flex-wrap: wrap;
@@ -143,8 +159,47 @@ a:hover{
   justify-content: center;
   align-items: center;
 }
+.profilePic{
+  background-size: cover;
+  background-image: url("./public/profilePic.jpg");
+  height: 300px;
+  width: 300px;
+  border-radius: 100%
+}
+h5{
+  width: 500px;
+  font-size: 16px;
+  text-align: justify;
+}
+h3{
+  height: 30px;
+  width: 150px;
+  background-color: rgba(255, 140, 26, 0.4);
+  margin-top: 1px;
+  border-radius: 5px;
+  border: rgba(200, 200, 200, 1) solid 2px;
+  padding-left: 10px;
+}
+p{
+  border: rgba(200, 200, 200, 1) solid 2px;
+  border-radius: 5px;
+  margin-top: -20px;
+  font-size: 13px;
+  height: 70px;
+  width: 375px;
+  padding-left: 10px;
+  background-color: rgba(0,125,255,0.25);
+}
 
-.projects{
+.projectsRows1{
+  margin-top: 50px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 1150px;
+  justify-content: space-between;
+}
+.projectsRow2{
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
