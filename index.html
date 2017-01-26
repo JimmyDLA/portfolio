@@ -64,7 +64,7 @@
     <div class="contNav">
       <div class="insideCont">
         <h1>Contact Me</h1>
-        <form action="contactForm.php" method="post" name="contactForm" class="contactForm">
+        <form id="contactForm" onsubmit="submitForm(); return false;">
           <div class="containerForm">
             <div class="leftForm">
               <input type="text" id="inputName" placeholder="Name" required>

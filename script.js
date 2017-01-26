@@ -270,3 +270,28 @@ function closeProjectNav() {
   document.querySelector(".title").style.opacity = "1";
   document.querySelector(".insideProj").style.display = "none";
 }
+
+
+//FUNCTION TO SUBMIT CONTACT FORM
+function submitForm(){
+  document.querySelector("#inputSubmit").disable = true;
+  document.querySelector("#status").innerHTML = "Please wait... ";
+  let formdata =  new FormData();
+  formdata.append( "inputName", document.querySelector("#inputName").value);
+  formdata.append( "inputEmail", document.querySelector("#inputEmail").value);
+  formdata.append( "inputSubject", document.querySelector("#inputSubject").value);
+  formdata.append( "inputMessage", document.querySelector("inputMessage").value);
+  let ajax = new XMLHttpRequest();
+  ajax.open("POST", "form.php");
+  ajax.onreadystatechange = function(){
+    if(ajax.readyState == 4 && ajax.status == 200){
+      if(ajax.responseText == "seccuss"){
+        document.querySelector("#contactForm").innerHTML = '<h2>Thanks '+ document.querySelector("#inputName").value+', your message has been sent.</h2>';
+      }else{
+        document.querySelector("status").innerHTML = ajax.responseText;
+        document.querySelector("#inputSubmit").disable = false;
+      }
+    }
+  }
+  ajax.send( formdata );
+}
