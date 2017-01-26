@@ -106,7 +106,7 @@ setTimeout(makeY, 3000)
 setTimeout(makeLname, 4000)
 setTimeout(makeWebDev, 4500)
 
-// THIS IS TO OPEN ABOUT
+// THIS IS TO OPEN/CLOSE ABOUT
 let aboutOpen = 0;
   function openAbout(x){
     if((contactOpen === 0 ) && (projectOpen === 0)){
@@ -161,7 +161,7 @@ let aboutOpen = 0;
     document.querySelector(".title").style.opacity = "1";
   }
 
-// THIS IS TO OPEN CONTACT
+// THIS IS TO OPEN/CLOSE CONTACT
 let contactOpen = 0;
   function openContact(x){
     if((aboutOpen === 0 ) && (projectOpen === 0)){
@@ -216,7 +216,7 @@ let contactOpen = 0;
     document.querySelector(".title").style.opacity = "1";
   }
 
-  //THIS IS TO OPEN PROJECTS
+  //THIS IS TO OPEN/CLOSE PROJECTS
   let projectOpen = 0;
     function openProject(x){
       if((aboutOpen === 0 ) && (contactOpen === 0)){
