@@ -171,12 +171,14 @@ a:hover{
   background-image: url("./public/profilePic.jpg");
   height: 300px;
   width: 300px;
-  border-radius: 100%
+  border-radius: 100%;
+  margin-top: -20px;
 }
 h5{
   width: 500px;
   font-size: 16px;
   text-align: justify;
+  margin-top: -1px;
 }
 h3{
   height: 30px;
@@ -218,6 +220,7 @@ p{
   height: 100vh;
   width: 100vw;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   transition: margin-left .5s;
   padding: 20px;
@@ -294,7 +297,7 @@ opacity: 0;
 }
 
 .title{
-  margin-top: -150px;
+  margin-top: 40px;
   color: rgb(255, 219, 77);
   align-self: center;
   transition: opacity 2s;
@@ -373,18 +376,27 @@ opacity: 0;
   width: 18vw;
   border-radius: 10px;
   font-size: 15px;
+  -webkit-box-shadow: 10px 12px 5px -6px rgba(0,0,0,0.42);
+  -moz-box-shadow: 10px 12px 5px -6px rgba(0,0,0,0.42);
+  box-shadow: 10px 12px 5px -6px rgba(0,0,0,0.42);
 }
 #inputEmail{
   font-size: 15px;
   height: 5vh;
   width: 18vw;
   border-radius: 10px;
+  -webkit-box-shadow: 10px 12px 5px -6px rgba(0,0,0,0.42);
+  -moz-box-shadow: 10px 12px 5px -6px rgba(0,0,0,0.42);
+  box-shadow: 10px 12px 5px -6px rgba(0,0,0,0.42);
 }
 #inputSubject{
   height: 5vh;
   width: 18vw;
   border-radius: 10px;
   font-size: 15px;
+  -webkit-box-shadow: 10px 12px 5px -6px rgba(0,0,0,0.42);
+  -moz-box-shadow: 10px 12px 5px -6px rgba(0,0,0,0.42);
+  box-shadow: 10px 12px 5px -6px rgba(0,0,0,0.42);
 }
 #inputMessage{
   height: 20vh;
@@ -392,6 +404,9 @@ opacity: 0;
   border-radius: 10px;
   border: solid 2px rgb(200, 200, 200);
   font-size: 15px;
+  -webkit-box-shadow: 10px 12px 5px -6px rgba(0,0,0,0.42);
+  -moz-box-shadow: 10px 12px 5px -6px rgba(0,0,0,0.42);
+  box-shadow: 10px 12px 5px -6px rgba(0,0,0,0.42);
 }
 #inputSubmit{
   margin-top: 20px;
@@ -403,7 +418,40 @@ opacity: 0;
   width: 40vw;
   border-radius: 10px;
   font-size: 20px;
+  -webkit-box-shadow: 10px 12px 5px -6px rgba(0,0,0,0.42);
+  -moz-box-shadow: 10px 12px 5px -6px rgba(0,0,0,0.42);
+  box-shadow: 10px 12px 5px -6px rgba(0,0,0,0.42);
 }
 #inputSubmit:hover{
   background-color: rgb(255,20,20);
+}
+.socialNet{
+  margin-top: 150px;
+  margin-left: 560px;
+  height: 70px;
+  width: 250px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  z-index: 4;
+}
+#github{
+  margin-top: -5px;
+  height: 60px;
+  width: 60px;
+  background-image: url("./public/githubLogo.png");
+  background-size: cover;
+
+}
+#linkedin{
+  height: 50px;
+  width: 50px;
+  background-image: url("./public/linkedinLogo.png");
+  background-size: cover;
+}
+#instagram{
+  height: 50px;
+  width: 50px;
+  background-image: url("./public/instagramLogo.png");
+  background-size: cover;
 }

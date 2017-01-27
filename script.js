@@ -94,7 +94,7 @@ function makeWebDev(){
 }
 
   // THIS IS TO MAKE HOW MANY BUBBLES
-makeBub(40)
+makeBub(45)
 
 // THIS IS TO FADE IN NAME AND TITLE
 setTimeout(makeJ, 1000)
