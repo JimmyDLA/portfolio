@@ -92,6 +92,11 @@ function makeWebDev(){
   let myName = document.querySelector(".webDev");
   myName.style.opacity = "1";
 }
+function makeLine(){
+  let myName = document.querySelector(".line");
+  myName.style.opacity = "1";
+}
+
 
   // THIS IS TO MAKE HOW MANY BUBBLES
 makeBub(45)
@@ -104,6 +109,7 @@ setTimeout(makeMm, 2500)
 setTimeout(makeY, 3000)
 setTimeout(makeLname, 4000)
 setTimeout(makeWebDev, 4500)
+setTimeout(makeLine, 5000)
 
 // THIS IS TO OPEN/CLOSE ABOUT
 let aboutOpen = 0;

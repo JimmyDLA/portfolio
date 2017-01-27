@@ -1,7 +1,6 @@
 html{
 background-color: rgb(40, 40, 40);
 font-family: 'Heebo', sans-serif;
-
 }
 
 header{
@@ -10,6 +9,15 @@ header{
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+}
+hr{
+  margin-top: -10px;
+  background-color: rgb(255, 219, 77);
+  height: 5px;
+  width: 200px;
+  border: none;
+  opacity: 0;
+  transition: 2s;
 }
 
 .homeLogo{
