@@ -58,7 +58,7 @@ function makeBub(howMany){
     newBubble.style.transitionDelay = `${i*0.1}s`
     newBubble.addEventListener("mouseout", opacityWhole);
     newBubble.addEventListener("mouseover", opacityMinus);
-    document.querySelector("#main").appendChild(newBubble);
+    document.querySelector("body").appendChild(newBubble);
     newBubble.focus();
     newBubble.className = "focus";
   }
