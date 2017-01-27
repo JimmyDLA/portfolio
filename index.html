@@ -3,21 +3,23 @@
   <head>
     <meta charset="utf-8">
     <title>Portfolio</title>
-    <link href="https://fonts.googleapis.com/css?family=Roboto:900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Bungee+Shade|Catamaran:900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Heebo:800" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Fredoka+One" rel="stylesheet">
     <link rel="stylesheet" href="style.css" media="screen" title="no title">
   </head>
-
   <body>
-    <div id="main">
-      <div class="menuContainer" onclick="openMenu(this)">
-        <div class="burgerContainer">
-          <div class="burger" id="burger1"></div>
-          <div class="burger" id="burger2"></div>
-          <div class="burger" id="burger3"></div>
-        </div>
-        <span class="text">Menu</span>
+    <header>
+      <div class="homeLogo" onclick="location.reload()">
       </div>
+      <ul>
+        <li><a href="#" onclick="openAbout(this)" >About</a></li>
+        <li><a href="#" onclick="openContact(this)">Contact</a></li>
+        <li><a href="#" onclick="openProject(this)">Projects</a></li>
+        <li><a href="./Jimmy Web Dev Resume.pdf" target="_blank">Resume</a></li>
+      </ul>
+    </header>
+    <div id="main">
       <div class="title">
         <div class="fName">
           <span id="letterJ">J</span>
@@ -29,43 +31,104 @@
         <div class="lName">
           DE LOS ANGELES
         </div>
+        <hr class="line">
+        <div class="webDev">
+          Full-Stack Web Developer
+        </div>
+      </div>
+      <div class="socialNet">
+        <a href="https://github.com/JimmyDLA" target="_blank">
+          <div id="github"></div>
+        </a>
+        <a href="https://www.linkedin.com/in/jimmydla" target="_blank">
+          <div id="linkedin"></div>
+        </a>
+        <a href="https://www.instagram.com/j_dla" target="_blank">
+          <div id="instagram"></div>
+        </a>
       </div>
     </div>
-    <div class="mainNav">
-      <div class="insideMenu">
-        <a id="" href="#"><h1>About Me</h1></a>
-        <a id="" href="#"><h1>Projects:</h1></a>
-        <div class="projects">
-          <a id="" href="#" target="_blank">
-            <div class="projImg1">
-              <div class="projShade">
-                <h3>Project #1: D-Ball Game</h3>
-              </div>
+    <div class="aboutNav">
+      <div class="insideAbout">
+        <h1>About Me</h1>
+        <div class="profilePic"></div>
+        <h5>Hi my name is Jimmy De Los Angeles
+          I was born in New York, New York, raised in the
+          Bronx until the age of 5 before moving to the
+          Dominican Republic with my family for 11 years.
+          I came back to the United States to finish
+          high school and attend college. I'm grateful
+          for this experience because it has been extremely
+          humbling. Initially, I was guided by the adults
+          in my life to pursue a career in finance and
+          accounting but I quickly realized that was not
+          my calling. I had always been a very curious
+          individual who always wanted to know how
+          everything works. Coding is the manifestation of
+          my curiousity. Imagination has no boundaries and
+          the possibilities are virtually endless. This is
+          the greatest aspect of a career that I am excited
+          to be apart of.
+        </h5>
+      </div>
+    </div>
+    <div class="contNav">
+      <div class="insideCont">
+        <h1>Contact Me</h1>
+        <form id="contactForm" onsubmit="submitForm(); return false;">
+          <div class="containerForm">
+            <div class="leftForm">
+              <input type="text" id="inputName" placeholder="Name" required>
+              <input type="email" id="inputEmail" placeholder="Email address" required>
+              <input type="text" id="inputSubject" placeholder="Subject">
             </div>
+            <div class="rightForm">
+              <textarea type="text" id="inputMessage" placeholder="Message" required></textarea>
+            </div>
+          </div>
+          <input type="submit" value="Submit" id="inputSubmit">
+          <span id="status"></span>
+        </form>
+      </div>
+    </div>
+    <div class="projNav">
+      <div class="insideProj">
+        <div class="projectsRows1">
+          <a id="proj1" href="#" target="_blank">
+            <div class="projImg1"></div>
+            <h3>D-Ball Game</h3>
+            <p>A game where you have to destroy all the bricks and </br>
+              not let the ball hit the ground. </br>
+              <u>Tech:</u> JavaScript/HTML/CSS/jQuery/and more
+            </p>
           </a>
-          <a id="" href="https://nyc-jobs.herokuapp.com" target="_blank">
-            <div class="projImg2">
-              <div class="projShade">
-                <h3>Project #2: NYC Jobs</h3>
-              </div>
-            </div>
-          </a>
-          <a id="" href="https://wid-blink.herokuapp.com/" target="_blank">
-            <div class="projImg3">
-              <div class="projShade">
-                <h3>Project #3: Blink </h3>
-              </div>
-            </div>
-          </a>
-          <a id="" href="https://beerafideme.herokuapp.com/" target="_blank">
-            <div class="projImg4">
-              <div class="projShade">
-                <h3>Project #4: Beerafide</h3>
-              </div>
-            </div>
+          <a id="proj2" href="https://nyc-jobs.herokuapp.com" target="_blank">
+            <div class="projImg2"></div>
+            <h3>NYC Jobs</h3>
+            <p>This Full Stack app allows you to create users and save </br>
+              jobs in NYC, keeping track of jobs you like. </br>
+              <u>Tech:</u> Full Stack/JavaScript/MongoBD/API/MVC/and more
+            </p>
           </a>
         </div>
-        <a id="" href="#"><h1>Contact</h1></a>
+        <div class="projectsRow2">
+          <a id="proj3" href="https://wid-blink.herokuapp.com/" target="_blank">
+            <div class="projImg3"></div>
+            <h3>Blink </h3>
+            <p>Blink is a Full Stack app lets you creats users and a bucket</br>
+              list of places or things to do. </br>
+              <u>Tech:</u> Full Stack/JavaScript/SQL DB/Google Auth/React.js/and more
+            </p>
+          </a>
+          <a id="proj4" href="https://beerafideme.herokuapp.com/" target="_blank">
+            <div class="projImg4"></div>
+            <h3>Beerafide</h3>
+            <p>Fun Full Stack app gives you the power to search any beer</br>
+              and give you the most important stats. </br>
+              <u>Tech:</u> Full Stack/JavaScript/API/MVC/and more
+            </p>
+          </a>
+        </div>
       </div>
     </div>
   </body>
