@@ -108,8 +108,8 @@ setTimeout(makeM, 2000)
 setTimeout(makeMm, 2500)
 setTimeout(makeY, 3000)
 setTimeout(makeLname, 4000)
-setTimeout(makeWebDev, 4500)
-setTimeout(makeLine, 5000)
+setTimeout(makeWebDev, 5000)
+setTimeout(makeLine, 4500)
 
 // THIS IS TO OPEN/CLOSE ABOUT
 let aboutOpen = 0;
