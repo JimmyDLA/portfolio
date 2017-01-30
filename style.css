@@ -132,7 +132,8 @@ a:hover{
   left: 50vw;
   border-radius: 10px;
   justify-content: center;
-  align-items: center;
+  flex-direction: row;
+
 }
 .projNav{
   height: 0vh;
@@ -158,9 +159,7 @@ a:hover{
   align-items: center;
 }
 .insideCont{
-  background-image: url("./public/envelope.jpg");
-  background-size: cover;
-  color: rgb(50,50,50);
+  color: rgb(200,200,200);
   display: none;
   flex-direction: column;
   flex-wrap: wrap;
