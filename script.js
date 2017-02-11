@@ -42,9 +42,8 @@ function opacityMinus(){
   this.style.opacity = "0";
 }
 
+//function to create bubbles affects
 function makeBub(howMany){
-  //create emement container here
-  //for create bubbles
   for(let i = 0; i < howMany; i++) {
     let ranNum = widHeight();
     let newBubble = document.createElement("DIV")
@@ -97,8 +96,7 @@ function makeLine(){
   myName.style.opacity = "1";
 }
 
-
-  // THIS IS TO MAKE HOW MANY BUBBLES
+// THIS IS TO MAKE HOW MANY BUBBLES
 makeBub(45)
 
 // THIS IS TO FADE IN NAME AND TITLE
@@ -154,6 +152,8 @@ let aboutOpen = 0;
     document.querySelector(".aboutNav").style.left = "1vw";
     document.querySelector(".insideAbout").style.display = "flex";
     document.querySelector(".title").style.opacity = "0";
+    document.querySelector("#about").style.color = "rgb(255, 219, 77)";
+
   }
 
   function closeAboutNav() {
@@ -164,6 +164,7 @@ let aboutOpen = 0;
     document.querySelector(".aboutNav").style.left = "50vw";
     document.querySelector(".insideAbout").style.display = "none";
     document.querySelector(".title").style.opacity = "1";
+    document.querySelector("#about").style.color = "rgb(200, 200, 200)";
   }
 
 // THIS IS TO OPEN/CLOSE CONTACT
@@ -209,6 +210,7 @@ let contactOpen = 0;
     document.querySelector(".contNav").style.left = "1vw";
     document.querySelector(".insideCont").style.display = "flex";
     document.querySelector(".title").style.opacity = "0";
+    document.querySelector("#contact").style.color = "rgb(255, 219, 77)";
   }
 
   function closeContactNav() {
@@ -219,6 +221,8 @@ let contactOpen = 0;
     document.querySelector(".contNav").style.left = "50vw";
     document.querySelector(".insideCont").style.display = "none";
     document.querySelector(".title").style.opacity = "1";
+    document.querySelector("#contact").style.color = "rgb(200, 200, 200)";
+
   }
 
   //THIS IS TO OPEN/CLOSE PROJECTS
@@ -264,6 +268,7 @@ function openProjectNav() {
   document.querySelector(".projNav").style.left = "1vw";
   document.querySelector(".title").style.opacity = "0";
   document.querySelector(".insideProj").style.display = "flex";
+  document.querySelector("#projects").style.color = "rgb(255, 219, 77)";
 }
 
 function closeProjectNav() {
@@ -274,6 +279,8 @@ function closeProjectNav() {
   document.querySelector(".projNav").style.left = "50vw";
   document.querySelector(".title").style.opacity = "1";
   document.querySelector(".insideProj").style.display = "none";
+  document.querySelector("#projects").style.color = "rgb(200, 200, 200)";
+
 }
 
 
