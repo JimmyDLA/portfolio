@@ -13,9 +13,9 @@
       <div class="homeLogo" onclick="location.reload()">
       </div>
       <ul>
-        <li><a href="#" onclick="openAbout(this)" >About</a></li>
-        <li><a href="#" onclick="openContact(this)">Contact</a></li>
-        <li><a href="#" onclick="openProject(this)">Projects</a></li>
+        <li><a href="#" onclick="openAbout(this)" id="about" >About</a></li>
+        <li><a href="#" onclick="openContact(this)" id="contact">Contact</a></li>
+        <li><a href="#" onclick="openProject(this)" id="projects">Projects</a></li>
         <li><a href="./Jimmy Web Dev Resume.pdf" target="_blank">Resume</a></li>
       </ul>
     </header>
@@ -50,7 +50,6 @@
     </div>
     <div class="aboutNav">
       <div class="insideAbout">
-        <h1>About Me</h1>
         <div class="profilePic"></div>
         <h5>Hi my name is Jimmy De Los Angeles
           I was born in New York, New York, raised in the
@@ -74,7 +73,6 @@
     </div>
     <div class="contNav">
       <div class="insideCont">
-        <h1>Contact Me</h1>
         <form id="contactForm" onsubmit="submitForm(); return false;">
           <div class="containerForm">
             <div class="leftForm">
