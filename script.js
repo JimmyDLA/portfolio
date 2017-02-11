@@ -26,11 +26,11 @@ function widHeight(){
   return num;
 }
 function yAxis(){
-  posY = Math.floor(Math.random()* 600);
+  posY = Math.floor(Math.random()* 510);
   return posY;
 }
 function xAxis(){
-  posX = Math.floor(Math.random()* 1150);
+  posX = Math.floor(Math.random()* 1050);
   return posX
 }
 
@@ -282,10 +282,12 @@ function submitForm(){
   document.querySelector("#inputSubmit").disable = true;
   document.querySelector("#status").innerHTML = "Please wait... ";
   let formdata =  new FormData();
+
   formdata.append( "inputName", document.querySelector("#inputName").value);
   formdata.append( "inputEmail", document.querySelector("#inputEmail").value);
-  formdata.append( "inputSubject", document.querySelector("#inputSubject").value);
-  formdata.append( "inputMessage", document.querySelector("inputMessage").value);
+  //formdata.append( "inputSubject", document.querySelector("#inputSubject").value);
+  //formdata.append( "inputMessage", document.querySelector("inputMessage").value);
+  console.log(formdata);
   let ajax = new XMLHttpRequest();
   ajax.open("POST", "form.php");
   ajax.onreadystatechange = function(){
