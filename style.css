@@ -23,10 +23,14 @@ hr{
   opacity: 0;
   transition: 2s;
 }
+img{
+  height: 7vh;
+  width: 7vh;
+}
 
 .homeLogo{
-  background-image: url("./public/homeLogo_.png");
-  background-size: cover;
+  /*background-image: url("./public/homeLogo_.png");
+  background-size: cover;*/
   margin-top: 20px;
   margin-left: 20px;
   height: 7vh;
@@ -213,9 +217,13 @@ p{
   background-color: rgba(0,125,255,0.25);
 }
 
-.projectsRows1{
+.projectsRow0{
+  height: 10vh;
+  width: 1150px;
+}
+
+.projectsRow1{
   position: relative;
-  top: -20px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -240,10 +248,6 @@ p{
   padding: 20px;
   margin-left: 0;
   position: relative;
-}
-img{
-  height: 150px;
-  width: 250px;
 }
 
 .first{
@@ -438,10 +442,10 @@ opacity: 0;
 }
 .socialNet{
   position: absolute;
-  bottom: 20px;
+  left: 42%;
+  bottom: 2%;
   height: 70px;
   width: 250px;
-  align-self: center;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
