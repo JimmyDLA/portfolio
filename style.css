@@ -169,8 +169,7 @@ a:hover{
   color: rgb(200,200,200);
   display: none;
   flex-direction: column;
-  flex-wrap: wrap;
-  justify-content: center;
+  padding-top: 50px;
   align-items: center;
   height: 60vh;
   width: 50vw;
@@ -196,6 +195,7 @@ h5{
   font-size: 16px;
   text-align: justify;
   margin-top: -1px;
+  color: white;
 }
 h3{
   height: 30px;
@@ -375,11 +375,11 @@ opacity: 0;
 .containerForm{
   margin-top: 150px;
   display: flex;
-  flex-direction: row;
-  height: 20vh;
+  flex-direction: column;
+  height: 50vh;
   width: 40vw;
   justify-content: center;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 .leftForm{
   display: flex;
@@ -388,7 +388,7 @@ opacity: 0;
 }
 #inputName{
   height: 5vh;
-  width: 18vw;
+  width: 40vw;
   border-radius: 10px;
   font-size: 15px;
   -webkit-box-shadow: 10px 12px 5px -6px rgba(0,0,0,0.42);
@@ -398,7 +398,7 @@ opacity: 0;
 #inputEmail{
   font-size: 15px;
   height: 5vh;
-  width: 18vw;
+  width: 40vw;
   border-radius: 10px;
   -webkit-box-shadow: 10px 12px 5px -6px rgba(0,0,0,0.42);
   -moz-box-shadow: 10px 12px 5px -6px rgba(0,0,0,0.42);
@@ -406,7 +406,7 @@ opacity: 0;
 }
 #inputSubject{
   height: 5vh;
-  width: 18vw;
+  width: 40vw;
   border-radius: 10px;
   font-size: 15px;
   -webkit-box-shadow: 10px 12px 5px -6px rgba(0,0,0,0.42);
@@ -415,7 +415,7 @@ opacity: 0;
 }
 #inputMessage{
   height: 20vh;
-  width: 20vw;
+  width: 40vw;
   border-radius: 10px;
   border: solid 2px rgb(200, 200, 200);
   font-size: 15px;
@@ -424,6 +424,7 @@ opacity: 0;
   box-shadow: 10px 12px 5px -6px rgba(0,0,0,0.42);
 }
 #inputSubmit{
+  align-self: center;
   margin-top: 20px;
   color: white;
   background: rgb(200,0,0);
