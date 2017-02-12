@@ -26,11 +26,11 @@ function widHeight(){
   return num;
 }
 function yAxis(){
-  posY = Math.floor(Math.random()* 510);
+  posY = Math.floor(Math.random()* 80);
   return posY;
 }
 function xAxis(){
-  posX = Math.floor(Math.random()* 1050);
+  posX = Math.floor(Math.random()* 80);
   return posX
 }
 
@@ -52,8 +52,8 @@ function makeBub(howMany){
     newBubble.style.backgroundColor = flashingLights();
     newBubble.style.height = ranNum + "px";
     newBubble.style.width = ranNum + "px";
-    newBubble.style.top = yAxis() + "px";
-    newBubble.style.left = xAxis() + "px";
+    newBubble.style.top = yAxis() + "%";
+    newBubble.style.left = xAxis() + "%";
     newBubble.style.transitionDelay = `${i*0.1}s`
     newBubble.addEventListener("mouseout", opacityWhole);
     newBubble.addEventListener("mouseover", opacityMinus);
