@@ -227,14 +227,14 @@ p{
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  width: 1150px;
+  width: 90%;
   justify-content: space-between;
 }
 .projectsRow2{
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  width: 1150px;
+  width: 90%;
   justify-content: space-between;
 }
 
