@@ -26,7 +26,7 @@ function widHeight(){
   return num;
 }
 function yAxis(){
-  posY = Math.floor(Math.random()* 80);
+  posY = Math.floor(Math.random()* 65);
   return posY;
 }
 function xAxis(){
