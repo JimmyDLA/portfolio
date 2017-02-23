@@ -1,7 +1,10 @@
 html{
 background-color: rgb(40, 40, 40);
 font-family: 'Heebo', sans-serif;
+height: 98vh;
+width: 98vw;
 }
+
 body{
   height: 98vh;
   width: 98vw;
@@ -13,7 +16,7 @@ header{
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  font-family: 'Proza Libre', sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }
 hr{
   position: relative;

@@ -21,12 +21,12 @@ function flashingLights(){
 function widHeight(){
   num = Math.floor(Math.random()* 400);
   if(num < 150){
-    num = num + 200;
+    num = num + 150;
   }
   return num;
 }
 function yAxis(){
-  posY = Math.floor(Math.random()* 65);
+  posY = Math.floor(Math.random()* 80);
   return posY;
 }
 function xAxis(){
