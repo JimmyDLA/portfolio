@@ -8,11 +8,13 @@
     <link href="https://fonts.googleapis.com/css?family=Fredoka+One" rel="stylesheet">
     <link rel="stylesheet" href="style.css" media="screen" title="no title">
   </head>
+
   <body>
     <header>
       <div class="homeLogo" onclick="location.reload()">
         <img src="./public/homeLogo_.png" alt="home">
       </div>
+
       <ul>
         <li><a href="#" onclick="openAbout(this)" id="about" >About</a></li>
         <li><a href="#" onclick="openProject(this)" id="projects">Projects</a></li>
@@ -20,6 +22,8 @@
         <li><a href="#" onclick="openContact(this)" id="contact">Contact</a></li>
       </ul>
     </header>
+
+          <!-- HOME PAGE  -->
     <div id="main">
       <div class="title">
         <div class="fName">
@@ -29,29 +33,38 @@
           <div id="letterMm">M</div>
           <div id="letterY">Y</div>
         </div>
+
         <div class="lName">
           DE LOS ANGELES
         </div>
+
         <hr class="line">
+
         <div class="webDev">
           Full-Stack Web Developer
         </div>
       </div>
+
       <div class="socialNet">
         <a href="https://github.com/JimmyDLA" target="_blank">
           <div id="github"></div>
         </a>
+
         <a href="https://www.linkedin.com/in/jimmydla" target="_blank">
           <div id="linkedin"></div>
         </a>
+
         <a href="https://www.instagram.com/j_dla" target="_blank">
           <div id="instagram"></div>
         </a>
       </div>
     </div>
+
+                <!-- ABOUT PAGE / HIDDEN ELEMENTS -->
     <div class="aboutNav">
       <div class="insideAbout">
         <div class="profilePic"></div>
+
         <h5>
           Hi, my name is Jimmy De Los Angeles and
           I am from NYC. I grew up in the Bronx until
@@ -75,6 +88,8 @@
         </h5>
       </div>
     </div>
+
+                <!-- CONTACT PAGE / HIDDEN ELEMENT  -->
     <div class="contNav">
       <div class="insideCont">
         <form id="contactForm" onsubmit="submitForm(); return false;">
@@ -85,13 +100,17 @@
             <textarea type="text" id="inputMessage" placeholder="Message" required></textarea>
             <input type="submit" value="Submit" id="inputSubmit">
           </div>
+
           <span id="status"></span>
         </form>
       </div>
     </div>
+
+                  <!-- PROJECT PAGE / HIDDEN DIV  -->
     <div class="projNav">
       <div class="insideProj">
         <div class="projectsRow0"></div>
+
         <div class="projectsRow1">
           <a id="proj1" href="https://jimmydla.github.io/d-ball-project1/frontPage.html" target="_blank">
             <div class="projImg1"></div>
@@ -101,6 +120,7 @@
               <u>Tech:</u> JavaScript/HTML/CSS/jQuery/and more
             </p>
           </a>
+
           <a id="proj2" href="https://nyc-jobs.herokuapp.com" target="_blank">
             <div class="projImg2"></div>
             <h3>NYC Jobs</h3>
@@ -110,6 +130,7 @@
             </p>
           </a>
         </div>
+
         <div class="projectsRow2">
           <a id="proj3" href="https://wid-blink.herokuapp.com/" target="_blank">
             <div class="projImg3"></div>
@@ -119,6 +140,7 @@
               <u>Tech:</u> Full Stack/React.js/SQL DB/Google Auth/and more
             </p>
           </a>
+
           <a id="proj4" href="https://beerafideme.herokuapp.com/" target="_blank">
             <div class="projImg4"></div>
             <h3>Beerafide</h3>

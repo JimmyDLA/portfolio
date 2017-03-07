@@ -37,8 +37,8 @@ img{
   background-size: cover;*/
   margin-top: 20px;
   margin-left: 20px;
-  height: 7vh;
-  width: 4vw;
+  height: 32px;
+  width: 32px;
   z-index: 4;
   cursor: pointer;
 }
