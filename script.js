@@ -146,12 +146,14 @@ let aboutOpen = 0;
 
   function openAboutNav() {
     document.querySelector(".aboutNav").style.width = "97%";
-    document.querySelector(".aboutNav").style.height = "750px";
+    document.querySelector(".aboutNav").style.height = "95%";
     document.querySelector(".aboutNav").style.zIndex = "3";
     document.querySelector(".aboutNav").style.top = "2vh";
     document.querySelector(".aboutNav").style.left = "1vw";
     document.querySelector(".insideAbout").style.display = "flex";
     document.querySelector(".title").style.opacity = "0";
+    document.querySelector("#socialHome").style.opacity = "0";
+    document.querySelector("#socialInside").style.opacity = "1";
     document.querySelector("#about").style.color = "rgb(255, 219, 77)";
     document.querySelector("header").style.backgroundColor = "rgba(0, 0, 0, 0)";
 
@@ -165,6 +167,8 @@ let aboutOpen = 0;
     document.querySelector(".aboutNav").style.left = "50vw";
     document.querySelector(".insideAbout").style.display = "none";
     document.querySelector(".title").style.opacity = "1";
+    document.querySelector("#socialHome").style.opacity = "1";
+    document.querySelector("#socialInside").style.opacity = "0";
     document.querySelector("#about").style.color = "rgb(200, 200, 200)";
     document.querySelector("header").style.backgroundColor = "rgba(0, 0, 0, 0.5)";
 
@@ -207,12 +211,14 @@ let contactOpen = 0;
 
   function openContactNav() {
     document.querySelector(".contNav").style.width = "97%";
-    document.querySelector(".contNav").style.height = "750px";
+    document.querySelector(".contNav").style.height = "95%";
     document.querySelector(".contNav").style.zIndex = "3";
     document.querySelector(".contNav").style.top = "2vh";
     document.querySelector(".contNav").style.left = "1vw";
     document.querySelector(".insideCont").style.display = "flex";
     document.querySelector(".title").style.opacity = "0";
+    document.querySelector("#socialHome").style.opacity = "0";
+    document.querySelector("#socialInside").style.opacity = "1";
     document.querySelector("#contact").style.color = "rgb(255, 219, 77)";
     document.querySelector("header").style.backgroundColor = "rgba(0, 0, 0, 0)";
 
@@ -226,6 +232,8 @@ let contactOpen = 0;
     document.querySelector(".contNav").style.left = "50vw";
     document.querySelector(".insideCont").style.display = "none";
     document.querySelector(".title").style.opacity = "1";
+    document.querySelector("#socialHome").style.opacity = "1";
+    document.querySelector("#socialInside").style.opacity = "0";
     document.querySelector("#contact").style.color = "rgb(200, 200, 200)";
     document.querySelector("header").style.backgroundColor = "rgba(0, 0, 0, 0.5)";
 
@@ -269,11 +277,12 @@ let contactOpen = 0;
 
 function openProjectNav() {
   document.querySelector(".projNav").style.width = "97%";
-  document.querySelector(".projNav").style.height = "750px";
+  document.querySelector(".projNav").style.height = "95%";
   document.querySelector(".projNav").style.zIndex = "3";
   document.querySelector(".projNav").style.top = "2vh";
   document.querySelector(".projNav").style.left = "1vw";
   document.querySelector(".title").style.opacity = "0";
+  document.querySelector("#socialHome").style.opacity = "0";
   document.querySelector(".insideProj").style.display = "flex";
   document.querySelector("#projects").style.color = "rgb(255, 219, 77)";
   document.querySelector("header").style.backgroundColor = "rgba(0, 0, 0, 0)";
@@ -287,6 +296,7 @@ function closeProjectNav() {
   document.querySelector(".projNav").style.top = "50vh";
   document.querySelector(".projNav").style.left = "50vw";
   document.querySelector(".title").style.opacity = "1";
+  document.querySelector("#socialHome").style.opacity = "1";
   document.querySelector(".insideProj").style.display = "none";
   document.querySelector("#projects").style.color = "rgb(200, 200, 200)";
   document.querySelector("header").style.backgroundColor = "rgba(0, 0, 0, 0.5)";
