@@ -7,6 +7,31 @@ function randomColor(){
   return rgba;
 }
 
+function time(){
+  let sec = Math.floor(Math.random()* 6 + 4);
+  return sec;
+}
+
+let audio = $(".audioDemo");
+console.log(audio);
+let mute = false;
+
+function toggleMuteAudio(){
+    audio.prop("muted",!audio.prop("muted"));
+}
+
+function sound(){
+  if (mute === false) {
+    document.querySelector(".muteIcon").style.backgroundImage = "url(./public/unMuteIcon.png)";
+    toggleMuteAudio();
+    mute = true;
+  } else{
+    document.querySelector(".muteIcon").style.backgroundImage = "url(./public/muteIcon.png)";
+    toggleMuteAudio();
+    mute = false;
+  }
+}
+
 function flashingLights(){
   let temp = Math.floor(Math.random()*3);
   if(temp === 0){
@@ -54,12 +79,21 @@ function makeBub(howMany){
     newBubble.style.width = ranNum + "px";
     newBubble.style.top = yAxis() + "%";
     newBubble.style.left = xAxis() + "%";
-    newBubble.style.transitionDelay = `${i*0.1}s`
+    newBubble.style.transitionDelay = `${i*0.1}s`;
+    // newBubble.style.animationDuration = time() + "s";
     newBubble.addEventListener("mouseout", opacityWhole);
     newBubble.addEventListener("mouseover", opacityMinus);
     document.querySelector("body").appendChild(newBubble);
     newBubble.focus();
     newBubble.className = "focus";
+  }
+}
+
+function addAnimation(){
+  for (var i = 0; i < 45; i++) {
+    bubble = document.querySelector(`#bubble${i}`);
+    bubble.style.animationDuration = time() + "s";
+    console.log(bubble);
   }
 }
 
@@ -108,6 +142,17 @@ setTimeout(makeY, 3000)
 setTimeout(makeLname, 4000)
 setTimeout(makeWebDev, 5000)
 setTimeout(makeLine, 4500)
+setTimeout(addAnimation, 4500)
+
+//close all tabs
+function closeAll(){
+  aboutOpen = 0;
+  contactOpen = 0;
+  projectOpen = 0;
+  closeAboutNav();
+  closeProjectNav();
+  closeContactNav();
+}
 
 // THIS IS TO OPEN/CLOSE ABOUT
 let aboutOpen = 0;

@@ -11,7 +11,7 @@
 
   <body>
     <header id="header">
-      <div class="homeLogo" onclick="location.reload()">
+      <div class="homeLogo" onclick="closeAll()">
         <img src="./public/homeLogo_.png" alt="home">
       </div>
 
@@ -22,6 +22,14 @@
         <li><a href="./Jimmy Web Dev Resume.pdf" target="_blank">Resume</a></li>
       </ul>
     </header>
+
+    <a href="#">
+      <div class="muteIcon" onclick="sound()"></div>
+    </a>
+
+    <audio class="audioDemo" preload="none" loop="loop" autoplay="autoplay">
+      <source src="./public/Intro01.mp3" type="audio/mpeg">
+    </audio>
 
           <!-- HOME PAGE  -->
     <div id="main">
@@ -119,7 +127,7 @@
           <span id="status"></span>
         </form>
 
-        <div id="socialInside">
+        <div id="socialCont">
           <a href="https://github.com/JimmyDLA" target="_blank">
             <div id="github"></div>
           </a>
@@ -150,10 +158,10 @@
 
           <a id="proj2" href="https://nyc-jobs.herokuapp.com" target="_blank">
             <div class="projImg2"></div>
-            <h3>NYC Jobs</h3>
-            <p>This Full Stack app allows you to create users and save </br>
-              jobs in NYC, keeping track of jobs you like. </br>
-              <u>Tech:</u> Full Stack/JavaScript/MongoBD/API/MVC/and more
+            <h3 id="nycWreck">NYC Wreck-A-Mended</h3>
+            <p>NYC Wreck-A-Mended is a modern auto body shop website with
+               unique features and animation. </br>
+              <u>Tech:</u> JavaScript/HTML5/CSS3/Animation/AOS and more
             </p>
           </a>
         </div>
@@ -178,21 +186,8 @@
           </a>
         </div>
       </div>
-<!--
-        <div id="socialInside">
-          <a href="https://github.com/JimmyDLA" target="_blank">
-            <div id="github"></div>
-          </a>
-
-          <a href="https://www.linkedin.com/in/jimmydla" target="_blank">
-            <div id="linkedin"></div>
-          </a>
-
-          <a href="https://www.instagram.com/j_dla" target="_blank">
-            <div id="instagram"></div>
-          </a>
-        </div> -->
     </div>
   </body>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
   <script src="script.js" charset="utf-8"></script>
 </html>

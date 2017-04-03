@@ -85,7 +85,7 @@ a:hover{
 }
 .projImg2{
   border-radius: 5px;
-  background-image: url("./public/project2.png");
+  background-image: url("./public/nycWreckProject.png");
   background-size: cover;
   height: 175px;
   width: 385px;
@@ -162,6 +162,15 @@ a:hover{
   align-items: center;
 }
 
+#socialCont{
+  position: absolute;
+  bottom: 5px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 250px;
+}
+
 .insideAbout{
   margin-top: 40px;
   height: 600px;
@@ -178,11 +187,11 @@ a:hover{
   color: rgb(200,200,200);
   display: none;
   flex-direction: column;
-  padding-top: 50px;
   align-items: center;
-  height: 60vh;
-  width: 50vw;
-  border-radius: 20px
+  height: 100%;
+  width: 100%;
+  border-radius: 20px;
+  position: relative;
 }
 .insideProj{
   width: 100%;
@@ -192,8 +201,9 @@ a:hover{
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-
 }
+
+
 .profilePic{
   background-size: cover;
   background-image: url("./public/profilePic.jpg");
@@ -314,8 +324,16 @@ p{
   position: absolute;
   transition: opacity 0.5s;
   opacity: 1;
+  animation: inOut alternate infinite;
 
 }
+
+@keyframes inOut {
+  from{opacity: 0;}
+  to{opacity: 1;}
+
+}
+
 .focusFade{
 opacity: 0;
 }
@@ -382,6 +400,9 @@ opacity: 0;
   font-size: 35px;
   position: relative;
   /*top: -100px;*/
+}
+#nycWreck{
+  width: 250px;
 }
 
 .containerForm{
@@ -453,6 +474,16 @@ opacity: 0;
 #inputSubmit:hover{
   background-color: rgb(255,20,20);
 }
+.muteIcon{
+  height: 45px;
+  width: 45px;
+  position: absolute;
+  top: 80px;
+  left: 20px;
+  background-image: url("./public/muteIcon.png");
+  background-size: cover;
+  z-index: 4;
+}
 .socialNet{
   position: absolute;
   left: 42%;
@@ -468,6 +499,7 @@ opacity: 0;
 #socialInside{
   opacity: 0;
   transition: opacity;
+  transition-duration: 0.1s
   transition-delay: 0.1s;
   height: 70px;
   width: 250px;
@@ -475,6 +507,8 @@ opacity: 0;
   flex-direction: row;
   justify-content: space-around;
   z-index: 3;
+  bottom: 1px;
+  position: absolute;
 
 }
 
