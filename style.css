@@ -349,6 +349,9 @@ opacity: 0;
   transition: opacity 2s;
   z-index: 1;
   font-family: 'Bungee Shade', cursive;
+  /*font-family: 'Shrikhand', cursive;
+  font-family: 'Anton', sans-serif;*/
+
 }
 
 .fName{
