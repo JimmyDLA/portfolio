@@ -181,7 +181,6 @@ a:hover{
   justify-content: center;
   align-items: center;
   position: relative;
-  overflow-y: scroll;
 }
 .insideCont{
   color: rgb(200,200,200);
