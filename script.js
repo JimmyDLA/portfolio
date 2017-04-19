@@ -93,7 +93,7 @@ function addAnimation(){
   for (var i = 0; i < 45; i++) {
     bubble = document.querySelector(`#bubble${i}`);
     bubble.style.animationDuration = time() + "s";
-    console.log(bubble);
+    // console.log(bubble);
   }
 }
 
@@ -146,9 +146,6 @@ setTimeout(addAnimation, 4500)
 
 //close all tabs
 function closeAll(){
-  aboutOpen = 0;
-  contactOpen = 0;
-  projectOpen = 0;
   closeAboutNav();
   closeProjectNav();
   closeContactNav();
@@ -160,12 +157,11 @@ let aboutOpen = 0;
     if((contactOpen === 0 ) && (projectOpen === 0)){
       if (aboutOpen === 0) {
         openAboutNav();
-        aboutOpen = 1;
+        menuButton();
         console.log("opened about");
         console.log(aboutOpen);
       }else{
         closeAboutNav()
-        aboutOpen = 0;
         console.log("closed about");
         console.log(aboutOpen);
       }
@@ -173,16 +169,12 @@ let aboutOpen = 0;
     if((contactOpen === 1) || (projectOpen === 1)){
       closeContactNav();
       closeProjectNav();
-      contactOpen = 0;
-      projectOpen = 0;
       if (aboutOpen === 0) {
         openAboutNav();
-        aboutOpen = 1;
         console.log("opened about");
         console.log(aboutOpen);
       }else{
         closeAboutNav()
-        aboutOpen = 0;
         console.log("closed about");
         console.log(aboutOpen);
       }
@@ -197,11 +189,11 @@ let aboutOpen = 0;
     document.querySelector(".aboutNav").style.left = "1vw";
     document.querySelector(".insideAbout").style.display = "flex";
     document.querySelector(".title").style.opacity = "0";
-    document.querySelector("#socialHome").style.opacity = "0";
-    document.querySelector("#socialInside").style.opacity = "1";
+    // document.querySelector("#socialHome").style.opacity = "0";
+    // document.querySelector("#socialInside").style.opacity = "1";
     document.querySelector("#about").style.color = "rgb(255, 219, 77)";
     document.querySelector("header").style.backgroundColor = "rgba(0, 0, 0, 0)";
-
+    aboutOpen = 1;
   }
 
   function closeAboutNav() {
@@ -212,11 +204,11 @@ let aboutOpen = 0;
     document.querySelector(".aboutNav").style.left = "50vw";
     document.querySelector(".insideAbout").style.display = "none";
     document.querySelector(".title").style.opacity = "1";
-    document.querySelector("#socialHome").style.opacity = "1";
-    document.querySelector("#socialInside").style.opacity = "0";
+    // document.querySelector("#socialHome").style.opacity = "1";
+    // document.querySelector("#socialInside").style.opacity = "0";
     document.querySelector("#about").style.color = "rgb(200, 200, 200)";
     document.querySelector("header").style.backgroundColor = "rgba(0, 0, 0, 0.5)";
-
+    aboutOpen = 0;
   }
 
 // THIS IS TO OPEN/CLOSE CONTACT
@@ -225,12 +217,10 @@ let contactOpen = 0;
     if((aboutOpen === 0 ) && (projectOpen === 0)){
       if (contactOpen === 0) {
         openContactNav();
-        contactOpen = 1;
         console.log("opened contact");
         console.log(contactOpen);
       }else{
         closeContactNav()
-        contactOpen = 0;
         console.log("closed contact");
         console.log(contactOpen);
       }
@@ -238,16 +228,12 @@ let contactOpen = 0;
     if((aboutOpen === 1) || (projectOpen === 1)){
       closeAboutNav();
       closeProjectNav();
-      aboutOpen = 0;
-      projectOpen = 0;
       if (contactOpen === 0) {
         openContactNav();
-        contactOpen = 1;
         console.log("opened contact");
         console.log(contactOpen);
       }else{
         closeContactNav()
-        contactOpen = 0;
         console.log("closed contact");
         console.log(contactOpen);
       }
@@ -266,7 +252,7 @@ let contactOpen = 0;
     document.querySelector("#socialInside").style.opacity = "1";
     document.querySelector("#contact").style.color = "rgb(255, 219, 77)";
     document.querySelector("header").style.backgroundColor = "rgba(0, 0, 0, 0)";
-
+    contactOpen = 1;
   }
 
   function closeContactNav() {
@@ -281,7 +267,7 @@ let contactOpen = 0;
     document.querySelector("#socialInside").style.opacity = "0";
     document.querySelector("#contact").style.color = "rgb(200, 200, 200)";
     document.querySelector("header").style.backgroundColor = "rgba(0, 0, 0, 0.5)";
-
+    contactOpen = 0;
 
   }
 
@@ -291,12 +277,10 @@ let contactOpen = 0;
       if((aboutOpen === 0 ) && (contactOpen === 0)){
         if (projectOpen === 0) {
           openProjectNav();
-          projectOpen = 1;
           console.log("opened project");
           console.log(projectOpen);
         }else{
           closeProjectNav()
-          projectOpen = 0;
           console.log("closed project");
           console.log(projectOpen);
         }
@@ -304,16 +288,12 @@ let contactOpen = 0;
       if((aboutOpen === 1) || (contactOpen === 1)){
         closeContactNav();
         closeAboutNav();
-        aboutOpen = 0;
-        contactOpen = 0;
         if (projectOpen === 0) {
           openProjectNav();
-          projectOpen = 1;
           console.log("opened project");
           console.log(projectOpen);
         }else{
           closeProjectNav()
-          projectOpen = 0;
           console.log("closed project");
           console.log(projectOpen);
         }
@@ -331,7 +311,7 @@ function openProjectNav() {
   document.querySelector(".insideProj").style.display = "flex";
   document.querySelector("#projects").style.color = "rgb(255, 219, 77)";
   document.querySelector("header").style.backgroundColor = "rgba(0, 0, 0, 0)";
-
+  projectOpen = 1;
 }
 
 function closeProjectNav() {
@@ -345,8 +325,42 @@ function closeProjectNav() {
   document.querySelector(".insideProj").style.display = "none";
   document.querySelector("#projects").style.color = "rgb(200, 200, 200)";
   document.querySelector("header").style.backgroundColor = "rgba(0, 0, 0, 0.5)";
+  projectOpen = 0;
 
 
+}
+
+
+let menuOpen = 0;
+
+function menuButton() {
+  if ((menuOpen === 0) && (aboutOpen === 1)) {
+    document.querySelector(".burgerContainer").classList.toggle("change");
+    document.querySelector(".ul").style.display = "flex";
+    closeAboutNav()
+    menuOpen = 1;
+  }
+  else if ((menuOpen === 0) && (projectOpen === 1)) {
+    document.querySelector(".burgerContainer").classList.toggle("change");
+    document.querySelector(".ul").style.display = "flex";
+    closeProjectNav()
+    menuOpen = 1;
+  }
+  else if ((menuOpen === 0) && (contactOpen === 1)) {
+    document.querySelector(".burgerContainer").classList.toggle("change");
+    document.querySelector(".ul").style.display = "flex";
+    closeContactNav()
+    menuOpen = 1;
+  }
+  else if (menuOpen === 0) {
+    document.querySelector(".burgerContainer").classList.toggle("change");
+    document.querySelector(".ul").style.display = "flex";
+    menuOpen = 1;
+  }else{
+    document.querySelector(".burgerContainer").classList.toggle("change");
+    document.querySelector(".ul").style.display = "none";
+    menuOpen = 0;
+  }
 }
 
 
