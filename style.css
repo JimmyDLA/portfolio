@@ -25,7 +25,6 @@ header{
   background-color: rgba(0, 0, 0, 0.6);
   transition: 0.5s;
   z-index: 4;
-  position: fixed;
 }
 hr{
   position: relative;
@@ -80,6 +79,7 @@ a:hover{
 
 .allProj{
   padding: 5px 75px;
+  transform: scale(0.8);
 }
 
 .projImg1{
@@ -470,7 +470,7 @@ opacity: 0;
 }
 .socialNet{
   position: absolute;
-  bottom: 5%;
+  bottom: 10px;
   height: 70px;
   width: 250px;
   display: flex;
@@ -579,9 +579,6 @@ opacity: 0;
   li{
     display: block;
   }
-  .allProj{
-    padding: 20px;
-  }
   .title{
     transform: scale(0.6);
     height: 600px;
@@ -606,6 +603,7 @@ opacity: 0;
   }
   .allProj{
     transform: scale(0.8);
+    padding: 20px;
   }
   .homeLogo{
     transform: scale(0.8);
