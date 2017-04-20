@@ -146,10 +146,30 @@ setTimeout(addAnimation, 4500)
 
 //close all tabs
 function closeAll(){
+  if (menuOpen === 1) {
+    document.querySelector(".burgerContainer").classList.toggle("change");
+    document.querySelector(".ul").style.display = "none";
+    menuOpen = 0;
+  };
   closeAboutNav();
   closeProjectNav();
   closeContactNav();
 }
+
+function openAboutMobile(){
+  openAbout();
+  menuButton();
+}
+function openProjectMobile(){
+  openProject();
+  menuButton();
+}
+function openContactMobile(){
+  openContact();
+  menuButton();
+}
+
+
 
 // THIS IS TO OPEN/CLOSE ABOUT
 let aboutOpen = 0;
@@ -157,7 +177,6 @@ let aboutOpen = 0;
     if((contactOpen === 0 ) && (projectOpen === 0)){
       if (aboutOpen === 0) {
         openAboutNav();
-        menuButton();
         console.log("opened about");
         console.log(aboutOpen);
       }else{
@@ -180,9 +199,8 @@ let aboutOpen = 0;
       }
     }
   }
-
   function openAboutNav() {
-    document.querySelector(".aboutNav").style.width = "97%";
+    document.querySelector(".aboutNav").style.width = "98%";
     document.querySelector(".aboutNav").style.height = "95%";
     document.querySelector(".aboutNav").style.zIndex = "3";
     document.querySelector(".aboutNav").style.top = "2vh";
@@ -195,7 +213,6 @@ let aboutOpen = 0;
     document.querySelector("header").style.backgroundColor = "rgba(0, 0, 0, 0)";
     aboutOpen = 1;
   }
-
   function closeAboutNav() {
     document.querySelector(".aboutNav").style.width = "0%";
     document.querySelector(".aboutNav").style.height = "0%";
@@ -207,9 +224,12 @@ let aboutOpen = 0;
     // document.querySelector("#socialHome").style.opacity = "1";
     // document.querySelector("#socialInside").style.opacity = "0";
     document.querySelector("#about").style.color = "rgb(200, 200, 200)";
-    document.querySelector("header").style.backgroundColor = "rgba(0, 0, 0, 0.5)";
+    document.querySelector("header").style.backgroundColor = "rgba(0, 0, 0, 0.6)";
     aboutOpen = 0;
   }
+
+
+
 
 // THIS IS TO OPEN/CLOSE CONTACT
 let contactOpen = 0;
@@ -241,7 +261,7 @@ let contactOpen = 0;
   }
 
   function openContactNav() {
-    document.querySelector(".contNav").style.width = "97%";
+    document.querySelector(".contNav").style.width = "98%";
     document.querySelector(".contNav").style.height = "95%";
     document.querySelector(".contNav").style.zIndex = "3";
     document.querySelector(".contNav").style.top = "2vh";
@@ -266,10 +286,11 @@ let contactOpen = 0;
     document.querySelector("#socialHome").style.opacity = "1";
     document.querySelector("#socialInside").style.opacity = "0";
     document.querySelector("#contact").style.color = "rgb(200, 200, 200)";
-    document.querySelector("header").style.backgroundColor = "rgba(0, 0, 0, 0.5)";
+    document.querySelector("header").style.backgroundColor = "rgba(0, 0, 0, 0.6)";
     contactOpen = 0;
-
   }
+
+
 
   //THIS IS TO OPEN/CLOSE PROJECTS
   let projectOpen = 0;
@@ -301,7 +322,7 @@ let contactOpen = 0;
     }
 
 function openProjectNav() {
-  document.querySelector(".projNav").style.width = "97%";
+  document.querySelector(".projNav").style.width = "98%";
   document.querySelector(".projNav").style.height = "95%";
   document.querySelector(".projNav").style.zIndex = "3";
   document.querySelector(".projNav").style.top = "2vh";
@@ -324,15 +345,12 @@ function closeProjectNav() {
   document.querySelector("#socialHome").style.opacity = "1";
   document.querySelector(".insideProj").style.display = "none";
   document.querySelector("#projects").style.color = "rgb(200, 200, 200)";
-  document.querySelector("header").style.backgroundColor = "rgba(0, 0, 0, 0.5)";
+  document.querySelector("header").style.backgroundColor = "rgba(0, 0, 0, 0.6)";
   projectOpen = 0;
-
-
 }
 
-
+//Hamburger button function
 let menuOpen = 0;
-
 function menuButton() {
   if ((menuOpen === 0) && (aboutOpen === 1)) {
     document.querySelector(".burgerContainer").classList.toggle("change");
@@ -364,12 +382,13 @@ function menuButton() {
 }
 
 
+
+
 //FUNCTION TO SUBMIT CONTACT FORM
 function submitForm(){
   document.querySelector("#inputSubmit").disable = true;
   document.querySelector("#status").innerHTML = "Please wait... ";
   let formdata =  new FormData();
-
   formdata.append( "inputName", document.querySelector("#inputName").value);
   formdata.append( "inputEmail", document.querySelector("#inputEmail").value);
   //formdata.append( "inputSubject", document.querySelector("#inputSubject").value);
