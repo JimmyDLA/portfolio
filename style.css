@@ -617,7 +617,8 @@ opacity: 0;
     bottom: 10%;
   }
   #socialCont{
-    left: 16%
+    left: 16%;
+    bottom: 10%;
   }
   .allProj{
     transform: scale(0.8);
@@ -671,7 +672,7 @@ opacity: 0;
 
   }
   #inputSubmit{
-    height: 50px;
+    height: 80px;
     width: 300px;
 
   }
