@@ -220,10 +220,9 @@ a:hover{
 .profilePic{
   background-size: cover;
   background-image: url("./public/profilePic.jpg");
-  height: 50%;
-  width: 50%;
+  height: 250px;
+  width: 250px;
   border-radius: 100%;
-  margin-top: -20px;
 }
 h5{
   width: 600px;
