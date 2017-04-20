@@ -577,11 +577,20 @@ opacity: 0;
     align-self: center;
     margin-top: 20px;
   }
+  header{
+    position: fixed;
+  }
   ul{
     display: none;
   }
+  .ul{
+    margin-top: 75px;
+  }
   li{
     display: block;
+  }
+  #main{
+    margin-top: 50px;
   }
   .title{
     transform: scale(0.6);
@@ -605,6 +614,10 @@ opacity: 0;
   .socialNet{
     transform: scale(0.8);
     left: 16%;
+    bottom: 10%;
+  }
+  #socialCont{
+    left: 16%
   }
   .allProj{
     transform: scale(0.8);
@@ -657,7 +670,7 @@ opacity: 0;
 
   }
   #inputSubmit{
-    height: 30px;
+    height: 50px;
     width: 300px;
 
   }
