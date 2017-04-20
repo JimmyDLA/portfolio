@@ -25,6 +25,7 @@ header{
   background-color: rgba(0, 0, 0, 0.6);
   transition: 0.5s;
   z-index: 4;
+  position: fixed;
 }
 hr{
   position: relative;
