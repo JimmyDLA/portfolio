@@ -51,11 +51,11 @@ function widHeight(){
   return num;
 }
 function yAxis(){
-  posY = Math.floor(Math.random()* 90);
+  posY = Math.floor(Math.random()* 150 - 40);
   return posY;
 }
 function xAxis(){
-  posX = Math.floor(Math.random()* 90);
+  posX = Math.floor(Math.random()* 150 -  40);
   return posX
 }
 
@@ -90,7 +90,7 @@ function makeBub(howMany){
 }
 
 function addAnimation(){
-  for (var i = 0; i < 45; i++) {
+  for (var i = 0; i < 65; i++) {
     bubble = document.querySelector(`#bubble${i}`);
     bubble.style.animationDuration = time() + "s";
     // console.log(bubble);
@@ -131,9 +131,9 @@ function makeLine(){
 }
 
 // THIS IS TO MAKE HOW MANY BUBBLES
-makeBub(45)
+makeBub(65)
 
-// THIS IS TO FADE IN NAME AND TITLE
+// THIS IS TO FADE IN NAME, TITLE, AND BUBBLES
 setTimeout(makeJ, 1000)
 setTimeout(makeI, 1500)
 setTimeout(makeM, 2000)
@@ -142,7 +142,7 @@ setTimeout(makeY, 3000)
 setTimeout(makeLname, 4000)
 setTimeout(makeWebDev, 5000)
 setTimeout(makeLine, 4500)
-setTimeout(addAnimation, 4500)
+setTimeout(addAnimation, 6500)
 
 //close all tabs
 function closeAll(){

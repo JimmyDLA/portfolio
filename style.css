@@ -475,7 +475,6 @@ opacity: 0;
 .socialNet{
   position: absolute;
   bottom: 10px;
-  left: 50%;
   height: 70px;
   width: 250px;
   display: flex;
@@ -590,7 +589,7 @@ opacity: 0;
     width: 600px;
   }
   .focus{
-    transform: scale(0.4);
+    transform: scale(0.5);
   }
   .profilePic{
     transform: scale(0.7);
@@ -605,7 +604,7 @@ opacity: 0;
   }
   .socialNet{
     transform: scale(0.8);
-
+    left: 16%;
   }
   .allProj{
     transform: scale(0.8);
@@ -635,19 +634,19 @@ opacity: 0;
   }
   #inputName{
     margin-top: 10px;
-    height: 50px;
+    height: 30px;
     width: 300px;
 
   }
   #inputEmail{
     margin-top: 10px;
-    height: 50px;
+    height: 30px;
     width: 300px;
 
   }
   #inputSubject{
     margin-top: 10px;
-    height: 50px;
+    height: 30px;
     width: 300px;
 
   }
@@ -658,7 +657,7 @@ opacity: 0;
 
   }
   #inputSubmit{
-    height: 50px;
+    height: 30px;
     width: 300px;
 
   }
