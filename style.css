@@ -633,6 +633,7 @@ opacity: 0;
     transform: scale(0.8);
     top: 70px;
     left: 1px;
+    position: fixed;
   }
   form{
     height: 100%;
