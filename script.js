@@ -156,6 +156,7 @@ function closeAll(){
   closeContactNav();
 }
 
+//MOBILE TAB FUNCTIONS
 function openAboutMobile(){
   openAbout();
   menuButton();
@@ -269,7 +270,6 @@ let contactOpen = 0;
     document.querySelector(".insideCont").style.display = "flex";
     document.querySelector(".title").style.opacity = "0";
     document.querySelector("#socialHome").style.opacity = "0";
-    document.querySelector("#socialInside").style.opacity = "1";
     document.querySelector("#contact").style.color = "rgb(255, 219, 77)";
     document.querySelector("header").style.backgroundColor = "rgba(0, 0, 0, 0)";
     contactOpen = 1;

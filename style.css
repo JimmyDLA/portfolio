@@ -191,6 +191,7 @@ a:hover{
   color: rgb(200,200,200);
   display: none;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
   height: 100%;
   width: 100%;
@@ -389,7 +390,6 @@ opacity: 0;
 }
 
 .containerForm{
-  margin-top: 150px;
   display: flex;
   flex-direction: column;
   height: 50vh;
@@ -617,5 +617,44 @@ opacity: 0;
     top: 70px;
     left: 1px;
   }
+  form{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  .containerForm{
+    align-items: center;
+    align-self: center;
+    justify-content: center;
+  }
+  #inputName{
+    margin-top: 10px;
+    height: 50px;
+    width: 300px;
 
+  }
+  #inputEmail{
+    margin-top: 10px;
+    height: 50px;
+    width: 300px;
+
+  }
+  #inputSubject{
+    margin-top: 10px;
+    height: 50px;
+    width: 300px;
+
+  }
+  #inputMessage{
+    margin-top: 10px;
+    height: 300px;
+    width: 300px;
+
+  }
+  #inputSubmit{
+    height: 50px;
+    width: 300px;
+
+  }
 }
