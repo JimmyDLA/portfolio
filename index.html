@@ -2,24 +2,52 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <meta name="HandheldFriendly" content="true" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <link rel="icon" href="./public/pageLogo.png">
     <title>JimmyDLA Portfolio</title>
+    <link href="https://fonts.googleapis.com/css?family=Anton|Shrikhand" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Bungee+Shade|Catamaran:900|Montserrat" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Heebo:800" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Fredoka+One" rel="stylesheet">
     <link rel="stylesheet" href="style.css" media="screen" title="no title">
   </head>
+
   <body>
-    <header>
-      <div class="homeLogo" onclick="location.reload()">
+    <header id="header">
+      <div class="homeLogo" onclick="closeAll()">
         <img src="./public/homeLogo_.png" alt="home">
       </div>
+
+      <div class="burgerContainer" onclick="menuButton()">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+      </div>
+
       <ul>
         <li><a href="#" onclick="openAbout(this)" id="about" >About</a></li>
         <li><a href="#" onclick="openProject(this)" id="projects">Projects</a></li>
-        <li><a href="./Jimmy Web Dev Resume.pdf" target="_blank">Resume</a></li>
         <li><a href="#" onclick="openContact(this)" id="contact">Contact</a></li>
+        <li><a href="./Jimmy Web Dev Resume.pdf" target="_blank">Resume</a></li>
       </ul>
     </header>
+    <div class="ul">
+      <li><a href="#" onclick="openAboutMobile()" id="about" >About</a></li>
+      <li><a href="#" onclick="openProjectMobile()" id="projects">Projects</a></li>
+      <li><a href="#" onclick="openContactMobile()" id="contact">Contact</a></li>
+      <li><a href="./Jimmy Web Dev Resume.pdf" target="_blank">Resume</a></li>
+    </div>
+
+    <a href="#">
+      <div class="muteIcon" onclick="sound()"></div>
+    </a>
+
+    <audio class="audioDemo" preload="none" loop="loop" autoplay="autoplay">
+      <source src="./public/Intro01.mp3" type="audio/mpeg">
+    </audio>
+
+          <!-- HOME PAGE  -->
     <div id="main">
       <div class="title">
         <div class="fName">
@@ -29,26 +57,34 @@
           <div id="letterMm">M</div>
           <div id="letterY">Y</div>
         </div>
+
         <div class="lName">
           DE LOS ANGELES
         </div>
+
         <hr class="line">
+
         <div class="webDev">
           Full-Stack Web Developer
         </div>
       </div>
-      <div class="socialNet">
+
+      <div class="socialNet" id="socialHome">
         <a href="https://github.com/JimmyDLA" target="_blank">
           <div id="github"></div>
         </a>
+
         <a href="https://www.linkedin.com/in/jimmydla" target="_blank">
           <div id="linkedin"></div>
         </a>
+
         <a href="https://www.instagram.com/j_dla" target="_blank">
           <div id="instagram"></div>
         </a>
       </div>
     </div>
+
+                <!-- ABOUT PAGE / HIDDEN ELEMENTS -->
     <div class="aboutNav">
       <div class="insideAbout">
         <div class="profilePic"></div>
@@ -74,7 +110,24 @@
           I’m excited to be a part of.
         </h5>
       </div>
+
+
+        <div id="socialInside">
+          <a href="https://github.com/JimmyDLA" target="_blank">
+            <div id="github"></div>
+          </a>
+
+          <a href="https://www.linkedin.com/in/jimmydla" target="_blank">
+            <div id="linkedin"></div>
+          </a>
+
+          <a href="https://www.instagram.com/j_dla" target="_blank">
+            <div id="instagram"></div>
+          </a>
+        </div>
     </div>
+
+                <!-- CONTACT PAGE / HIDDEN ELEMENT  -->
     <div class="contNav">
       <div class="insideCont">
         <form id="contactForm" onsubmit="submitForm(); return false;">
@@ -85,15 +138,31 @@
             <textarea type="text" id="inputMessage" placeholder="Message" required></textarea>
             <input type="submit" value="Submit" id="inputSubmit">
           </div>
+
           <span id="status"></span>
         </form>
+
+        <div id="socialCont">
+          <a href="https://github.com/JimmyDLA" target="_blank">
+            <div id="github"></div>
+          </a>
+
+          <a href="https://www.linkedin.com/in/jimmydla" target="_blank">
+            <div id="linkedin"></div>
+          </a>
+
+          <a href="https://www.instagram.com/j_dla" target="_blank">
+            <div id="instagram"></div>
+          </a>
+        </div>
       </div>
     </div>
+
+                  <!-- PROJECT PAGE / HIDDEN DIV  -->
     <div class="projNav">
       <div class="insideProj">
-        <div class="projectsRow0"></div>
-        <div class="projectsRow1">
-          <a id="proj1" href="https://jimmydla.github.io/d-ball-project1/frontPage.html" target="_blank">
+        <!-- <div class="projectsRow1"> -->
+          <a class="allProj" id="proj1" href="https://jimmydla.github.io/d-ball-project1/frontPage.html" target="_blank">
             <div class="projImg1"></div>
             <h3>D-Ball Game</h3>
             <p>A game where you have to destroy all the bricks and </br>
@@ -101,17 +170,19 @@
               <u>Tech:</u> JavaScript/HTML/CSS/jQuery/and more
             </p>
           </a>
-          <a id="proj2" href="https://nyc-jobs.herokuapp.com" target="_blank">
+
+          <a class="allProj" id="proj2" href="http://nycwreckamended.com/" target="_blank">
             <div class="projImg2"></div>
-            <h3>NYC Jobs</h3>
-            <p>This Full Stack app allows you to create users and save </br>
-              jobs in NYC, keeping track of jobs you like. </br>
-              <u>Tech:</u> Full Stack/JavaScript/MongoBD/API/MVC/and more
+            <h3 id="nycWreck">NYC Wreck-A-Mended</h3>
+            <p>NYC Wreck-A-Mended is a modern auto body shop website with
+               unique features and animation. </br>
+              <u>Tech:</u> JavaScript/HTML5/CSS3/Animation/AOS and more
             </p>
           </a>
-        </div>
-        <div class="projectsRow2">
-          <a id="proj3" href="https://wid-blink.herokuapp.com/" target="_blank">
+        <!-- </div> -->
+
+        <!-- <div class="projectsRow2"> -->
+          <a class="allProj" id="proj3" href="https://wid-blink.herokuapp.com/" target="_blank">
             <div class="projImg3"></div>
             <h3>Blink </h3>
             <p>Blink is a Full Stack app lets you creats users and a bucket</br>
@@ -119,7 +190,8 @@
               <u>Tech:</u> Full Stack/React.js/SQL DB/Google Auth/and more
             </p>
           </a>
-          <a id="proj4" href="https://beerafideme.herokuapp.com/" target="_blank">
+
+          <a class="allProj" id="proj4" href="https://beerafideme.herokuapp.com/" target="_blank">
             <div class="projImg4"></div>
             <h3>Beerafide</h3>
             <p>Fun Full Stack app gives you the power to search any beer</br>
@@ -127,9 +199,10 @@
               <u>Tech:</u> Full Stack/JavaScript/API/MVC/and more
             </p>
           </a>
-        </div>
+        <!-- </div> -->
       </div>
     </div>
   </body>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
   <script src="script.js" charset="utf-8"></script>
 </html>

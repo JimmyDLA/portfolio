@@ -1,58 +1,71 @@
 html{
 background-color: rgb(40, 40, 40);
 font-family: 'Heebo', sans-serif;
-height: 98vh;
-width: 98vw;
+height: 100vh;
+width: 100vw;
+overflow-x: hidden;
+overflow-y: hidden;
 }
 
 body{
-  height: 98vh;
-  width: 98vw;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  position: relative;
 }
 
 header{
-  width: 95vw;
-  height: 5vh;
+  width: 100%;
+  height: 75px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: center;
   font-family: 'Montserrat', sans-serif;
+  background-color: rgba(0, 0, 0, 0.6);
+  transition: 0.5s;
+  z-index: 4;
 }
 hr{
   position: relative;
   background-color: rgb(255, 219, 77);
-  height: 1vh;
-  width: 10vw;
+  height: 10px;
+  width: 150px;
   border: none;
   opacity: 0;
   transition: 2s;
 }
 img{
-  height: 5vh;
-  width: 5vh;
+  height: 42px;
+  width: 42px;
 }
 
 .homeLogo{
   /*background-image: url("./public/homeLogo_.png");
   background-size: cover;*/
-  margin-top: 20px;
-  margin-left: 20px;
-  height: 7vh;
-  width: 4vw;
+  /*margin-top: 20px;
+  margin-left: 20px;*/
+  padding-left: 20px;
+  height: 50px;
+  width: 100px;
   z-index: 4;
   cursor: pointer;
+  color: rgb(200, 200, 200);
+  font-size: 50px;
 }
 ul{
   list-style-type: none;
   color: white;
   display: flex;
   justify-content: space-around;
-  width: 500px;
+  width: 600px;
+  padding-right: 40px;
 }
 li{
   display: inline;
   font-size: 30px;
   z-index: 4;
+  /*padding-left: 20px;*/
 }
 
 a{
@@ -63,46 +76,37 @@ a{
 a:hover{
   color: rgb(255, 219, 77);
 }
-/*#proj1{
-  margin-left: 50px;
-}*/
-#proj2{
-  position: relative;
-  left: 50px;
+
+.allProj{
+  padding: 5px 75px;
 }
-/*#proj3{
-  margin-left: 50px;
-}*/
-#proj4{
-  position: relative;
-  left: 50px;
-}
+
 .projImg1{
   border-radius: 5px;
   background-image: url("./public/project1.png");
   background-size: cover;
-  height: 200px;
-  width: 380px;
+  height: 175px;
+  width: 385px;
 }
 .projImg2{
   border-radius: 5px;
-  background-image: url("./public/project2.png");
+  background-image: url("./public/nycWreckImg.png");
   background-size: cover;
-  height: 200px;
+  height: 175px;
   width: 385px;
 }
 .projImg3{
   border-radius: 5px;
   background-image: url("./public/project3.png");
   background-size: cover;
-  height: 200px;
+  height: 175px;
   width: 385px;
 }
 .projImg4{
   border-radius: 5px;
   background-image: url("./public/project4.png");
   background-size: cover;
-  height: 200px;
+  height: 175px;
   width: 385px;
 }
 .projShade{
@@ -118,12 +122,13 @@ a:hover{
 }
 
 .aboutNav{
-  height: 0vh;
-  width: 0vw;
-  background: rgba(0,0,0,0.3);
+  height: 0%;
+  width: 0%;
+  background: rgba(0,0,0,0.5);
   transition: 0.5s;
   z-index: 0;
   display: flex;
+  flex-direction: column;
   position: absolute;
   top: 50vh;
   left: 50vw;
@@ -132,9 +137,9 @@ a:hover{
   align-items: center;
 }
 .contNav{
-  height: 0vh;
-  width: 0vw;
-  background: rgba(0,0,0,0.3);
+  height: 0%;
+  width: 0%;
+  background: rgba(0,0,0,0.5);
   transition: 0.5s;
   z-index: 0;
   display: flex;
@@ -147,12 +152,13 @@ a:hover{
 
 }
 .projNav{
-  height: 0vh;
-  width: 0vw;
-  background: rgba(0,0,0,0.3);
+  height: 0%;
+  width: 0%;
+  background: rgba(0,0,0,0.5);
   transition: 0.5s;
   z-index: 0;
   display: flex;
+  flex-direction: column;
   position: absolute;
   top: 50vh;
   left: 50vw;
@@ -161,45 +167,64 @@ a:hover{
   align-items: center;
 }
 
+#socialCont{
+  position: absolute;
+  bottom: 5px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 250px;
+}
+
 .insideAbout{
+  margin-top: 40px;
+  height: 600px;
+  width: 600px;
   color: rgb(200, 200, 200);
   display: none;
   flex-direction: column;
-  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+  position: relative;
 }
 .insideCont{
   color: rgb(200,200,200);
   display: none;
   flex-direction: column;
-  padding-top: 50px;
+  justify-content: center;
   align-items: center;
-  height: 60vh;
-  width: 50vw;
-  border-radius: 20px
+  height: 100%;
+  width: 100%;
+  border-radius: 20px;
+  position: relative;
 }
 .insideProj{
+  width: 100%;
+  height: 100%;
+  margin-top: 40px;
   display: none;
-  flex-direction: column;
+  flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-around;
   align-items: center;
+  overflow-y: scroll;
 }
+
+
 .profilePic{
   background-size: cover;
   background-image: url("./public/profilePic.jpg");
-  height: 300px;
-  width: 300px;
+  height: 50%;
+  width: 50%;
   border-radius: 100%;
   margin-top: -20px;
 }
 h5{
-  width: 500px;
+  width: 600px;
   font-size: 16px;
   text-align: justify;
-  margin-top: -1px;
   color: white;
+  margin-bottom: 0;
 }
 h3{
   height: 30px;
@@ -228,30 +253,27 @@ p{
 }
 
 .projectsRow1{
-  position: relative;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  width: 90%;
-  justify-content: space-between;
+  width: 100%;
+  justify-content: space-around;
 }
 .projectsRow2{
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  width: 90%;
-  justify-content: space-between;
+  width: 100%;
+  justify-content: space-around;
 }
 
 #main {
-  height: 89vh;
-  width: 95vw;
+  height: 90%;
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   transition: margin-left .5s;
-  padding: 20px;
-  margin-left: 0;
   position: relative;
 }
 
@@ -279,36 +301,22 @@ p{
   font-size: 30px;
   color: rgb(200, 200, 200);
 }
-.burger{
-  height: 8px;
-  width: 50px;
-  background-color: rgba(0,125,255,0.5);
-  margin: 6px 0;
-  transition: 0.5s;
-
-
-}
-.change #burger1{
-  -webkit-transform: rotate(-45deg) translate(-9px, 6px) ;
-   transform: rotate(-45deg) translate(-9px, 6px) ;
-   }
-
-.change #burger2{
-  opacity: 0;
-}
-
-.change #burger3{
-      -webkit-transform: rotate(45deg) translate(-12px, -12px) ;
-      transform: rotate(45deg) translate(-12px, -12px) ;
-    }
 
 .focus{
   border-radius: 50%;
   position: absolute;
   transition: opacity 0.5s;
   opacity: 1;
+  animation: inOut alternate infinite;
 
 }
+
+@keyframes inOut {
+  from{opacity: 0;}
+  to{opacity: 1;}
+
+}
+
 .focusFade{
 opacity: 0;
 }
@@ -325,6 +333,7 @@ opacity: 0;
   transition: opacity 2s;
   z-index: 1;
   font-family: 'Bungee Shade', cursive;
+
 }
 
 .fName{
@@ -376,9 +385,11 @@ opacity: 0;
   position: relative;
   /*top: -100px;*/
 }
+#nycWreck{
+  width: 250px;
+}
 
 .containerForm{
-  margin-top: 150px;
   display: flex;
   flex-direction: column;
   height: 50vh;
@@ -446,17 +457,44 @@ opacity: 0;
 #inputSubmit:hover{
   background-color: rgb(255,20,20);
 }
+.muteIcon{
+  height: 45px;
+  width: 45px;
+  position: absolute;
+  top: 80px;
+  left: 20px;
+  background-image: url("./public/muteIcon.png");
+  background-size: cover;
+  z-index: 4;
+}
 .socialNet{
   position: absolute;
-  left: 42%;
-  bottom: 2%;
+  bottom: 5%;
   height: 70px;
   width: 250px;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+  align-self: center;
   z-index: 4;
 }
+
+#socialInside{
+  opacity: 0;
+  transition: opacity;
+  transition-duration: 0.1s
+  transition-delay: 0.1s;
+  height: 70px;
+  width: 250px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  z-index: 3;
+  bottom: 1px;
+  position: absolute;
+
+}
+
 #github{
   margin-top: -5px;
   height: 60px;
@@ -477,9 +515,146 @@ opacity: 0;
   background-image: url("./public/instagramLogo.png");
   background-size: cover;
 }
+.burgerContainer {
+    display: none;
+    cursor: pointer;
+    z-index: 4;
+}
+
+.bar1, .bar2, .bar3 {
+    width: 35px;
+    height: 5px;
+    background-color: rgb(200, 200, 200);
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+.change .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px) ;
+    transform: rotate(-45deg) translate(-9px, 6px) ;
+}
+
+.change .bar2 {
+  opacity: 0;
+}
+
+.change .bar3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px) ;
+    transform: rotate(45deg) translate(-8px, -8px) ;
+}
+
+.ul{
+  display: none;
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 2;
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Montserrat', sans-serif;
+
+}
 
 /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
 @media screen and (max-height: 450px) {
     .sidenav {padding-top: 15px;}
     .sidenav a {font-size: 18px;}
+}
+
+/*SMALLER TABLER OR MOBILE PHONE*/
+@media only screen and (max-width: 860px) and (min-width: 300px) {
+
+  .burgerContainer{
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    align-self: center;
+    margin-top: 20px;
+  }
+  ul{
+    display: none;
+  }
+  li{
+    display: block;
+  }
+  .allProj{
+    padding: 20px;
+  }
+  .title{
+    transform: scale(0.6);
+    height: 600px;
+    width: 600px;
+  }
+  .focus{
+    transform: scale(0.6);
+  }
+  .profilePic{
+    transform: scale(0.7);
+    padding-bottom: 20px;
+    margin-top: -150px;
+  }
+  h5{
+    transform: scale(0.8);
+    height: 300px;
+    width: 400px;
+    margin-top: -50px;
+  }
+  .socialNet{
+    transform: scale(0.8);
+  }
+  .allProj{
+    transform: scale(0.8);
+  }
+  .homeLogo{
+    transform: scale(0.8);
+    margin-left: -10px;
+    padding: 10px;
+
+  }
+  .muteIcon{
+    transform: scale(0.8);
+    top: 70px;
+    left: 1px;
+  }
+  form{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  .containerForm{
+    align-items: center;
+    align-self: center;
+    justify-content: center;
+  }
+  #inputName{
+    margin-top: 10px;
+    height: 50px;
+    width: 300px;
+
+  }
+  #inputEmail{
+    margin-top: 10px;
+    height: 50px;
+    width: 300px;
+
+  }
+  #inputSubject{
+    margin-top: 10px;
+    height: 50px;
+    width: 300px;
+
+  }
+  #inputMessage{
+    margin-top: 10px;
+    height: 300px;
+    width: 300px;
+
+  }
+  #inputSubmit{
+    height: 50px;
+    width: 300px;
+
+  }
 }

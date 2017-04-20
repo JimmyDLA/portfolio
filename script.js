@@ -7,6 +7,31 @@ function randomColor(){
   return rgba;
 }
 
+function time(){
+  let sec = Math.floor(Math.random()* 6 + 4);
+  return sec;
+}
+
+let audio = $(".audioDemo");
+console.log(audio);
+let mute = false;
+
+function toggleMuteAudio(){
+    audio.prop("muted",!audio.prop("muted"));
+}
+
+function sound(){
+  if (mute === false) {
+    document.querySelector(".muteIcon").style.backgroundImage = "url(./public/unMuteIcon.png)";
+    toggleMuteAudio();
+    mute = true;
+  } else{
+    document.querySelector(".muteIcon").style.backgroundImage = "url(./public/muteIcon.png)";
+    toggleMuteAudio();
+    mute = false;
+  }
+}
+
 function flashingLights(){
   let temp = Math.floor(Math.random()*3);
   if(temp === 0){
@@ -26,11 +51,11 @@ function widHeight(){
   return num;
 }
 function yAxis(){
-  posY = Math.floor(Math.random()* 80);
+  posY = Math.floor(Math.random()* 90);
   return posY;
 }
 function xAxis(){
-  posX = Math.floor(Math.random()* 80);
+  posX = Math.floor(Math.random()* 90);
   return posX
 }
 
@@ -54,12 +79,21 @@ function makeBub(howMany){
     newBubble.style.width = ranNum + "px";
     newBubble.style.top = yAxis() + "%";
     newBubble.style.left = xAxis() + "%";
-    newBubble.style.transitionDelay = `${i*0.1}s`
+    newBubble.style.transitionDelay = `${i*0.1}s`;
+    // newBubble.style.animationDuration = time() + "s";
     newBubble.addEventListener("mouseout", opacityWhole);
     newBubble.addEventListener("mouseover", opacityMinus);
     document.querySelector("body").appendChild(newBubble);
     newBubble.focus();
     newBubble.className = "focus";
+  }
+}
+
+function addAnimation(){
+  for (var i = 0; i < 45; i++) {
+    bubble = document.querySelector(`#bubble${i}`);
+    bubble.style.animationDuration = time() + "s";
+    // console.log(bubble);
   }
 }
 
@@ -108,6 +142,35 @@ setTimeout(makeY, 3000)
 setTimeout(makeLname, 4000)
 setTimeout(makeWebDev, 5000)
 setTimeout(makeLine, 4500)
+setTimeout(addAnimation, 4500)
+
+//close all tabs
+function closeAll(){
+  if (menuOpen === 1) {
+    document.querySelector(".burgerContainer").classList.toggle("change");
+    document.querySelector(".ul").style.display = "none";
+    menuOpen = 0;
+  };
+  closeAboutNav();
+  closeProjectNav();
+  closeContactNav();
+}
+
+//MOBILE TAB FUNCTIONS
+function openAboutMobile(){
+  openAbout();
+  menuButton();
+}
+function openProjectMobile(){
+  openProject();
+  menuButton();
+}
+function openContactMobile(){
+  openContact();
+  menuButton();
+}
+
+
 
 // THIS IS TO OPEN/CLOSE ABOUT
 let aboutOpen = 0;
@@ -115,12 +178,10 @@ let aboutOpen = 0;
     if((contactOpen === 0 ) && (projectOpen === 0)){
       if (aboutOpen === 0) {
         openAboutNav();
-        aboutOpen = 1;
         console.log("opened about");
         console.log(aboutOpen);
       }else{
         closeAboutNav()
-        aboutOpen = 0;
         console.log("closed about");
         console.log(aboutOpen);
       }
@@ -128,44 +189,48 @@ let aboutOpen = 0;
     if((contactOpen === 1) || (projectOpen === 1)){
       closeContactNav();
       closeProjectNav();
-      contactOpen = 0;
-      projectOpen = 0;
       if (aboutOpen === 0) {
         openAboutNav();
-        aboutOpen = 1;
         console.log("opened about");
         console.log(aboutOpen);
       }else{
         closeAboutNav()
-        aboutOpen = 0;
         console.log("closed about");
         console.log(aboutOpen);
       }
     }
   }
-
   function openAboutNav() {
-    document.querySelector(".aboutNav").style.width = "97vw";
-    document.querySelector(".aboutNav").style.height = "95vh";
+    document.querySelector(".aboutNav").style.width = "98%";
+    document.querySelector(".aboutNav").style.height = "95%";
     document.querySelector(".aboutNav").style.zIndex = "3";
     document.querySelector(".aboutNav").style.top = "2vh";
     document.querySelector(".aboutNav").style.left = "1vw";
     document.querySelector(".insideAbout").style.display = "flex";
     document.querySelector(".title").style.opacity = "0";
+    // document.querySelector("#socialHome").style.opacity = "0";
+    // document.querySelector("#socialInside").style.opacity = "1";
     document.querySelector("#about").style.color = "rgb(255, 219, 77)";
-
+    document.querySelector("header").style.backgroundColor = "rgba(0, 0, 0, 0)";
+    aboutOpen = 1;
   }
-
   function closeAboutNav() {
-    document.querySelector(".aboutNav").style.width = "0vw";
-    document.querySelector(".aboutNav").style.height = "0vh";
+    document.querySelector(".aboutNav").style.width = "0%";
+    document.querySelector(".aboutNav").style.height = "0%";
     document.querySelector(".aboutNav").style.zIndex = "0";
     document.querySelector(".aboutNav").style.top = "50vh";
     document.querySelector(".aboutNav").style.left = "50vw";
     document.querySelector(".insideAbout").style.display = "none";
     document.querySelector(".title").style.opacity = "1";
+    // document.querySelector("#socialHome").style.opacity = "1";
+    // document.querySelector("#socialInside").style.opacity = "0";
     document.querySelector("#about").style.color = "rgb(200, 200, 200)";
+    document.querySelector("header").style.backgroundColor = "rgba(0, 0, 0, 0.6)";
+    aboutOpen = 0;
   }
+
+
+
 
 // THIS IS TO OPEN/CLOSE CONTACT
 let contactOpen = 0;
@@ -173,12 +238,10 @@ let contactOpen = 0;
     if((aboutOpen === 0 ) && (projectOpen === 0)){
       if (contactOpen === 0) {
         openContactNav();
-        contactOpen = 1;
         console.log("opened contact");
         console.log(contactOpen);
       }else{
         closeContactNav()
-        contactOpen = 0;
         console.log("closed contact");
         console.log(contactOpen);
       }
@@ -186,16 +249,12 @@ let contactOpen = 0;
     if((aboutOpen === 1) || (projectOpen === 1)){
       closeAboutNav();
       closeProjectNav();
-      aboutOpen = 0;
-      projectOpen = 0;
       if (contactOpen === 0) {
         openContactNav();
-        contactOpen = 1;
         console.log("opened contact");
         console.log(contactOpen);
       }else{
         closeContactNav()
-        contactOpen = 0;
         console.log("closed contact");
         console.log(contactOpen);
       }
@@ -203,27 +262,35 @@ let contactOpen = 0;
   }
 
   function openContactNav() {
-    document.querySelector(".contNav").style.width = "97vw";
-    document.querySelector(".contNav").style.height = "95vh";
+    document.querySelector(".contNav").style.width = "98%";
+    document.querySelector(".contNav").style.height = "95%";
     document.querySelector(".contNav").style.zIndex = "3";
     document.querySelector(".contNav").style.top = "2vh";
     document.querySelector(".contNav").style.left = "1vw";
     document.querySelector(".insideCont").style.display = "flex";
     document.querySelector(".title").style.opacity = "0";
+    document.querySelector("#socialHome").style.opacity = "0";
     document.querySelector("#contact").style.color = "rgb(255, 219, 77)";
+    document.querySelector("header").style.backgroundColor = "rgba(0, 0, 0, 0)";
+    contactOpen = 1;
   }
 
   function closeContactNav() {
-    document.querySelector(".contNav").style.width = "0vw";
-    document.querySelector(".contNav").style.height = "0vh";
+    document.querySelector(".contNav").style.width = "0%";
+    document.querySelector(".contNav").style.height = "0%";
     document.querySelector(".contNav").style.zIndex = "0";
     document.querySelector(".contNav").style.top = "50vh";
     document.querySelector(".contNav").style.left = "50vw";
     document.querySelector(".insideCont").style.display = "none";
     document.querySelector(".title").style.opacity = "1";
+    document.querySelector("#socialHome").style.opacity = "1";
+    document.querySelector("#socialInside").style.opacity = "0";
     document.querySelector("#contact").style.color = "rgb(200, 200, 200)";
-
+    document.querySelector("header").style.backgroundColor = "rgba(0, 0, 0, 0.6)";
+    contactOpen = 0;
   }
+
+
 
   //THIS IS TO OPEN/CLOSE PROJECTS
   let projectOpen = 0;
@@ -231,12 +298,10 @@ let contactOpen = 0;
       if((aboutOpen === 0 ) && (contactOpen === 0)){
         if (projectOpen === 0) {
           openProjectNav();
-          projectOpen = 1;
           console.log("opened project");
           console.log(projectOpen);
         }else{
           closeProjectNav()
-          projectOpen = 0;
           console.log("closed project");
           console.log(projectOpen);
         }
@@ -244,16 +309,12 @@ let contactOpen = 0;
       if((aboutOpen === 1) || (contactOpen === 1)){
         closeContactNav();
         closeAboutNav();
-        aboutOpen = 0;
-        contactOpen = 0;
         if (projectOpen === 0) {
           openProjectNav();
-          projectOpen = 1;
           console.log("opened project");
           console.log(projectOpen);
         }else{
           closeProjectNav()
-          projectOpen = 0;
           console.log("closed project");
           console.log(projectOpen);
         }
@@ -261,27 +322,66 @@ let contactOpen = 0;
     }
 
 function openProjectNav() {
-  document.querySelector(".projNav").style.width = "97vw";
-  document.querySelector(".projNav").style.height = "95vh";
+  document.querySelector(".projNav").style.width = "98%";
+  document.querySelector(".projNav").style.height = "95%";
   document.querySelector(".projNav").style.zIndex = "3";
   document.querySelector(".projNav").style.top = "2vh";
   document.querySelector(".projNav").style.left = "1vw";
   document.querySelector(".title").style.opacity = "0";
+  document.querySelector("#socialHome").style.opacity = "0";
   document.querySelector(".insideProj").style.display = "flex";
   document.querySelector("#projects").style.color = "rgb(255, 219, 77)";
+  document.querySelector("header").style.backgroundColor = "rgba(0, 0, 0, 0)";
+  projectOpen = 1;
 }
 
 function closeProjectNav() {
-  document.querySelector(".projNav").style.width = "0vw";
-  document.querySelector(".projNav").style.height = "0vh";
+  document.querySelector(".projNav").style.width = "0%";
+  document.querySelector(".projNav").style.height = "0%";
   document.querySelector(".projNav").style.zIndex = "0";
   document.querySelector(".projNav").style.top = "50vh";
   document.querySelector(".projNav").style.left = "50vw";
   document.querySelector(".title").style.opacity = "1";
+  document.querySelector("#socialHome").style.opacity = "1";
   document.querySelector(".insideProj").style.display = "none";
   document.querySelector("#projects").style.color = "rgb(200, 200, 200)";
-
+  document.querySelector("header").style.backgroundColor = "rgba(0, 0, 0, 0.6)";
+  projectOpen = 0;
 }
+
+//Hamburger button function
+let menuOpen = 0;
+function menuButton() {
+  if ((menuOpen === 0) && (aboutOpen === 1)) {
+    document.querySelector(".burgerContainer").classList.toggle("change");
+    document.querySelector(".ul").style.display = "flex";
+    closeAboutNav()
+    menuOpen = 1;
+  }
+  else if ((menuOpen === 0) && (projectOpen === 1)) {
+    document.querySelector(".burgerContainer").classList.toggle("change");
+    document.querySelector(".ul").style.display = "flex";
+    closeProjectNav()
+    menuOpen = 1;
+  }
+  else if ((menuOpen === 0) && (contactOpen === 1)) {
+    document.querySelector(".burgerContainer").classList.toggle("change");
+    document.querySelector(".ul").style.display = "flex";
+    closeContactNav()
+    menuOpen = 1;
+  }
+  else if (menuOpen === 0) {
+    document.querySelector(".burgerContainer").classList.toggle("change");
+    document.querySelector(".ul").style.display = "flex";
+    menuOpen = 1;
+  }else{
+    document.querySelector(".burgerContainer").classList.toggle("change");
+    document.querySelector(".ul").style.display = "none";
+    menuOpen = 0;
+  }
+}
+
+
 
 
 //FUNCTION TO SUBMIT CONTACT FORM
@@ -289,7 +389,6 @@ function submitForm(){
   document.querySelector("#inputSubmit").disable = true;
   document.querySelector("#status").innerHTML = "Please wait... ";
   let formdata =  new FormData();
-
   formdata.append( "inputName", document.querySelector("#inputName").value);
   formdata.append( "inputEmail", document.querySelector("#inputEmail").value);
   //formdata.append( "inputSubject", document.querySelector("#inputSubject").value);
