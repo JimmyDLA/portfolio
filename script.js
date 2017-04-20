@@ -131,7 +131,7 @@ function makeLine(){
 }
 
 // THIS IS TO MAKE HOW MANY BUBBLES
-makeBub(45)
+// makeBub(45)
 
 // THIS IS TO FADE IN NAME AND TITLE
 setTimeout(makeJ, 1000)
