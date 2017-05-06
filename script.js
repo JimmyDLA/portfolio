@@ -131,7 +131,7 @@ function makeLine(){
 }
 
 // THIS IS TO MAKE HOW MANY BUBBLES
-makeBub(65)
+makeBub(85)
 
 // THIS IS TO FADE IN NAME, TITLE, AND BUBBLES
 setTimeout(makeJ, 1000)
@@ -225,7 +225,7 @@ let aboutOpen = 0;
     document.querySelector("#socialHome").style.opacity = "1";
     // document.querySelector("#socialInside").style.opacity = "0";
     document.querySelector("#about").style.color = "rgb(200, 200, 200)";
-    document.querySelector("header").style.backgroundColor = "rgba(0, 0, 0, 0.6)";
+    document.querySelector("header").style.backgroundColor = "rgba(0, 0, 0, 0.9)";
     aboutOpen = 0;
   }
 
@@ -286,7 +286,7 @@ let contactOpen = 0;
     document.querySelector("#socialHome").style.opacity = "1";
     document.querySelector("#socialInside").style.opacity = "0";
     document.querySelector("#contact").style.color = "rgb(200, 200, 200)";
-    document.querySelector("header").style.backgroundColor = "rgba(0, 0, 0, 0.6)";
+    document.querySelector("header").style.backgroundColor = "rgba(0, 0, 0, 0.9)";
     contactOpen = 0;
   }
 
@@ -345,7 +345,7 @@ function closeProjectNav() {
   document.querySelector("#socialHome").style.opacity = "1";
   document.querySelector(".insideProj").style.display = "none";
   document.querySelector("#projects").style.color = "rgb(200, 200, 200)";
-  document.querySelector("header").style.backgroundColor = "rgba(0, 0, 0, 0.6)";
+  document.querySelector("header").style.backgroundColor = "rgba(0, 0, 0, 0.9)";
   projectOpen = 0;
 }
 
