@@ -26,9 +26,11 @@ header{
   justify-content: space-between;
   align-items: center;
   font-family: 'Montserrat', sans-serif;
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: rgba(0, 0, 0, 0.9);
   transition: 0.5s;
   z-index: 4;
+
+  
 }
 hr{
   position: relative;
