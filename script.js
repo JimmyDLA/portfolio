@@ -8,7 +8,7 @@ function randomColor(){
 }
 
 function time(){
-  let sec = Math.floor(Math.random()* 6 + 4);
+  let sec = Math.floor(Math.random()* 4 + 3);
   return sec;
 }
 
