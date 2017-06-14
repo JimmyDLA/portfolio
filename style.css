@@ -195,7 +195,6 @@ a:hover{
   width: 600px;
   color: rgb(200, 200, 200);
   display: none;
-  overflow-y: scroll;
   flex-direction: column;
   justify-content: center;
   align-items: center;
