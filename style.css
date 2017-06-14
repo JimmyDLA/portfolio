@@ -334,9 +334,10 @@ opacity: 0;
 }
 
 .title{
+  height: 300px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   position: relative;
   top: -30px;
@@ -349,8 +350,6 @@ opacity: 0;
 }
 
 .fName{
-  height: 150px;
-  width: 500px;
   transition: opacity 2s;
   display: flex;
   flex-direction: row;
@@ -358,10 +357,8 @@ opacity: 0;
   justify-content: center;
 }
 .lName{
-  height: 110px;
   font-size: 55px;
   position: relative;
-  /*top: -100px;*/
   opacity: 0;
   transition: opacity 2s;
 }
