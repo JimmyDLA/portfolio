@@ -7,6 +7,10 @@ function randomColor(){
   return rgba;
 }
 
+window.onload = function () {
+    document.getElementById("audioDemo").play();
+}
+
 function time(){
   let sec = Math.floor(Math.random()* 4 + 3);
   return sec;
