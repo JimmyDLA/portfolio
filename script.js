@@ -90,7 +90,7 @@ function makeBub(howMany){
 }
 
 function addAnimation(){
-  for (var i = 0; i < 65; i++) {
+  for (var i = 0; i < 85; i++) {
     bubble = document.querySelector(`#bubble${i}`);
     bubble.style.animationDuration = time() + "s";
     // console.log(bubble);
