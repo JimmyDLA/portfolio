@@ -7,10 +7,6 @@ function randomColor(){
   return rgba;
 }
 
-window.onload = function () {
-    document.getElementById("audioDemo").play();
-}
-
 function time(){
   let sec = Math.floor(Math.random()* 4 + 3);
   return sec;
@@ -28,11 +24,11 @@ function sound(){
   if (mute === false) {
     document.querySelector(".muteIcon").style.backgroundImage = "url(./public/unMuteIcon.png)";
     toggleMuteAudio();
-    mute = true;
+    mute = !mute;
   } else{
     document.querySelector(".muteIcon").style.backgroundImage = "url(./public/muteIcon.png)";
     toggleMuteAudio();
-    mute = false;
+    mute = !mute;
   }
 }
 
