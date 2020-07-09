@@ -190,7 +190,7 @@ a:hover{
 }
 
 .insideAbout{
-  margin-top: 40px;
+  margin-top: 20px;
   height: 600px;
   width: 600px;
   color: rgb(200, 200, 200);
@@ -226,7 +226,7 @@ a:hover{
 
 .profilePic{
   background-size: cover;
-  background-image: url("./public/profilePic.jpg");
+  background-image: url("./public/profilePic2.png");
   height: 250px;
   width: 250px;
   border-radius: 100%;
@@ -411,20 +411,46 @@ opacity: 0;
   flex-direction: column;
   justify-content: space-between;
 }
+::placeholder {
+  color: white;
+  opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+ color: red;
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+ color: red;
+}
+input{
+  background-color: rgba(150, 150, 150, 0.5);
+  border-width: 0px;
+  color: white;
+  padding-left: 20px;
+}
+textarea{
+  border-width: 0px;
+  background-color: rgba(150, 150, 150, 0.5);
+  color: white;
+  padding-left: 20px;
+
+
+}
 #inputName{
   height: 5vh;
   width: 40vw;
-  border-radius: 10px;
+  border-radius: 5px;
   font-size: 15px;
-  -webkit-box-shadow: 10px 12px 5px -6px rgba(0,0,0,0.42);
-  -moz-box-shadow: 10px 12px 5px -6px rgba(0,0,0,0.42);
-  box-shadow: 10px 12px 5px -6px rgba(0,0,0,0.42);
+  /* -webkit-box-shadow: 10px 12px 5px -6px rgba(0,0,0,0.42);
+  -moz-box-shadow: 10px 12px 5px -6px rgba(0,0,0,0.42); */
+  /* box-shadow: 10px 12px 5px -6px rgba(0,0,0,0.42); */
 }
 #inputEmail{
   font-size: 15px;
   height: 5vh;
   width: 40vw;
-  border-radius: 10px;
+  border-radius: 5px;
   -webkit-box-shadow: 10px 12px 5px -6px rgba(0,0,0,0.42);
   -moz-box-shadow: 10px 12px 5px -6px rgba(0,0,0,0.42);
   box-shadow: 10px 12px 5px -6px rgba(0,0,0,0.42);
@@ -432,7 +458,7 @@ opacity: 0;
 #inputSubject{
   height: 5vh;
   width: 40vw;
-  border-radius: 10px;
+  border-radius: 5px;
   font-size: 15px;
   -webkit-box-shadow: 10px 12px 5px -6px rgba(0,0,0,0.42);
   -moz-box-shadow: 10px 12px 5px -6px rgba(0,0,0,0.42);
@@ -441,8 +467,7 @@ opacity: 0;
 #inputMessage{
   height: 20vh;
   width: 40vw;
-  border-radius: 10px;
-  border: solid 2px rgb(200, 200, 200);
+  border-radius: 5px;
   font-size: 15px;
   -webkit-box-shadow: 10px 12px 5px -6px rgba(0,0,0,0.42);
   -moz-box-shadow: 10px 12px 5px -6px rgba(0,0,0,0.42);
@@ -457,7 +482,7 @@ opacity: 0;
   border: none;
   height: 5vh;
   width: 40vw;
-  border-radius: 10px;
+  border-radius: 5px;
   font-size: 20px;
   -webkit-box-shadow: 10px 12px 5px -6px rgba(0,0,0,0.42);
   -moz-box-shadow: 10px 12px 5px -6px rgba(0,0,0,0.42);
