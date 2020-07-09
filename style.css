@@ -442,9 +442,9 @@ textarea{
   width: 40vw;
   border-radius: 5px;
   font-size: 15px;
-  /* -webkit-box-shadow: 10px 12px 5px -6px rgba(0,0,0,0.42);
-  -moz-box-shadow: 10px 12px 5px -6px rgba(0,0,0,0.42); */
-  /* box-shadow: 10px 12px 5px -6px rgba(0,0,0,0.42); */
+  -webkit-box-shadow: 10px 12px 5px -6px rgba(0,0,0,0.42);
+  -moz-box-shadow: 10px 12px 5px -6px rgba(0,0,0,0.42);
+  box-shadow: 10px 12px 5px -6px rgba(0,0,0,0.42);
 }
 #inputEmail{
   font-size: 15px;
