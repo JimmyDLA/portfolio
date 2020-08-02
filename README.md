@@ -6,7 +6,8 @@ My own Portfolio
 ## Description
 
 This is my own portfolio built on HTML, CSS, and Vanilla JavaScript. On my portfolio I display other projects from past jobs, passion projects and more.
-[Go to portfolio](https://jimmydla.github.io/portfolio/)
+
+[View portfolio](https://jimmydla.github.io/portfolio/)
 
 ## Authors
 
