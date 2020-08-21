@@ -1,6 +1,4 @@
 # JDLA Portfolio
-My own Portfolio
-
 ![Logo](./public/portfolioPreview.png)
 
 ## Description
