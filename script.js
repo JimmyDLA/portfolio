@@ -80,7 +80,6 @@ function makeBub(howMany){
     newBubble.style.top = yAxis() + "%";
     newBubble.style.left = xAxis() + "%";
     newBubble.style.transitionDelay = `${i*0.1}s`;
-    // newBubble.style.animationDuration = time() + "s";
     newBubble.addEventListener("mouseout", opacityWhole);
     newBubble.addEventListener("mouseover", opacityMinus);
     document.querySelector("body").appendChild(newBubble);
@@ -93,7 +92,6 @@ function addAnimation(){
   for (var i = 0; i < 85; i++) {
     bubble = document.querySelector(`#bubble${i}`);
     bubble.style.animationDuration = time() + "s";
-    // console.log(bubble);
   }
 }
 
@@ -209,7 +207,6 @@ let aboutOpen = 0;
     document.querySelector(".insideAbout").style.display = "flex";
     document.querySelector(".title").style.opacity = "0";
     document.querySelector("#socialHome").style.opacity = "0";
-    // document.querySelector("a").style.opacity = "0";
     document.querySelector("#about").style.color = "rgb(255, 219, 77)";
     document.querySelector("header").style.backgroundColor = "rgba(0, 0, 0, 0)";
     aboutOpen = 1;
@@ -223,7 +220,6 @@ let aboutOpen = 0;
     document.querySelector(".insideAbout").style.display = "none";
     document.querySelector(".title").style.opacity = "1";
     document.querySelector("#socialHome").style.opacity = "1";
-    // document.querySelector("#socialInside").style.opacity = "0";
     document.querySelector("#about").style.color = "rgb(200, 200, 200)";
     document.querySelector("header").style.backgroundColor = "rgba(0, 0, 0, 0.9)";
     aboutOpen = 0;
