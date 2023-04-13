@@ -12,22 +12,17 @@ function time(){
   return sec;
 }
 
-let audio = $(".audioDemo");
-console.log(audio);
+let audio = document.getElementById("audioDemo");
 let mute = false;
-
-function toggleMuteAudio(){
-    audio.prop("muted",!audio.prop("muted"));
-}
 
 function sound(){
   if (mute === false) {
-    document.querySelector(".muteIcon").style.backgroundImage = "url(./public/unMuteIcon.png)";
-    toggleMuteAudio();
+    document.querySelector(".muteIcon").style.backgroundImage = "url(./public/muteIcon.png)";
+    audio.play()
     mute = !mute;
   } else{
-    document.querySelector(".muteIcon").style.backgroundImage = "url(./public/muteIcon.png)";
-    toggleMuteAudio();
+    document.querySelector(".muteIcon").style.backgroundImage = "url(./public/unMuteIcon.png)";
+    audio.pause()
     mute = !mute;
   }
 }
