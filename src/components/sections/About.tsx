@@ -1,4 +1,5 @@
 import { Card } from "../ui/card";
+import ProfilePic from "../../../public/profilePic2.png";
 
 export function About() {
   return (
@@ -11,11 +12,11 @@ export function About() {
 
           <Card className="p-8 card-gradient border-gradient">
             <img
-              src="/public/profilePic2.png"
+              src={ProfilePic}
               alt="Profile Picture"
               className="profilePic mb-10 mx-auto rounded-full border-4 border-border w-56 h-56 md:w-96 md:h-96"
             />
-            <div className="space-y-6 text-muted-foreground leading-relaxed text-sm md:text-lg">
+            <div className="space-y-6 text-muted-foreground leading-relaxed text-sm md:text-lg text-justify">
               <p>
                 Born in New York, and raised in the Dominican Republic, my
                 journey into technology has been anything but conventional. I

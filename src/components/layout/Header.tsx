@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "../ui/button";
 import { ThemeToggle } from "../features/ThemeToggle";
+import Resume from "../../../Jimmy Web Dev Res.pdf";
 
 const navigation = [
   { name: "Home", href: "#home" },
@@ -9,7 +10,7 @@ const navigation = [
   { name: "Skills", href: "#skills" },
   { name: "Projects", href: "#projects" },
   { name: "Contact", href: "#contact" },
-  { name: "Resume", href: "./Jimmy Web Dev Res.pdf", target: "_blank" },
+  { name: "Resume", href: Resume, target: "_blank" },
 ];
 
 export function Header() {
@@ -28,7 +29,7 @@ export function Header() {
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled
+        isMobileMenuOpen || isScrolled
           ? "bg-background/80 backdrop-blur-lg border-b border-border"
           : "bg-transparent"
       }`}

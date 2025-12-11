@@ -1,5 +1,5 @@
 import { Github, Linkedin, Mail, Download, FileUser } from "lucide-react";
-import { Button } from "../ui/button";
+import Resume from "../../../Jimmy Web Dev Res.pdf";
 import { Card } from "../ui/card";
 
 const contactLinks = [
@@ -18,7 +18,7 @@ const contactLinks = [
   {
     name: "Resume",
     icon: FileUser,
-    href: "/Jimmy Web Dev Res.pdf",
+    href: Resume,
     label: "Download my resume",
   },
   {

@@ -8,36 +8,17 @@ export function Hero() {
       className="min-h-screen flex items-center justify-center relative overflow-hidden"
     >
       {/* Background gradient effect */}
-      <div
-        className="absolute inset-0 bg-gradient-to-br from-primary/10 via-background to-background"
-        style={{ animationDelay: "0s" }}
-      />
+      <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-background to-background" />
       {/* top right */}
-      <div
-        className="absolute top-20 right-10 w-40 h-40 md:w-96 md:h-96 bg-primary/40 rounded-full blur-3xl animate-float"
-        style={{ animationDelay: "3s" }}
-      />
+      <div className="absolute top-20 right-10 w-40 h-40 md:w-96 md:h-96 bg-primary/40 rounded-full blur-3xl animate-float" />
       {/* top left */}
-      <div
-        className="absolute top-20 left-10 w-40 h-40 md:w-96 md:h-96 bg-cyan-500/40 rounded-full blur-3xl animate-float"
-        style={{ animationDelay: "2s" }}
-      />
+      <div className="absolute top-20 left-10 w-40 h-40 md:w-96 md:h-96 bg-cyan-500/40 rounded-full blur-3xl animate-float" />
       {/* bottom right */}
-      <div
-        className="absolute bottom-20 right-10 w-40 h-40 md:w-96 md:h-96 bg-cyan-500/40 rounded-full blur-3xl animate-float"
-        style={{ animationDelay: "0s" }}
-      />
+      <div className="absolute bottom-20 right-10 w-40 h-40 md:w-96 md:h-96 bg-cyan-500/40 rounded-full blur-3xl animate-float" />
       {/* bottom left */}
-      <div
-        className="absolute bottom-10 left-0 w-40 h-40 md:w-96 md:h-96 bg-primary/20 rounded-full blur-3xl animate-float"
-        style={{ animationDelay: "1s" }}
-      />
-
+      <div className="absolute bottom-10 left-0 w-40 h-40 md:w-96 md:h-96 bg-primary/20 rounded-full blur-3xl animate-float" />
       {/* center */}
-      <div
-        className="absolute bottom-100 right-100 w-40 h-40 md:w-80 md:h-80 bg-green-500/30 rounded-full blur-3xl animate-float"
-        style={{ animationDelay: "0s" }}
-      />
+      <div className="absolute bottom-100 right-100 w-40 h-40 md:w-80 md:h-80 bg-green-500/30 rounded-full blur-3xl animate-float" />
 
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-4xl mx-auto text-center space-y-8 animate-fade-in">
