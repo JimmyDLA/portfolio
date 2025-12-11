@@ -18,7 +18,7 @@ const contactLinks = [
   {
     name: "Resume",
     icon: FileUser,
-    href: "./Jimmy Web Dev Res.pdf",
+    href: "portfolio/Jimmy Web Dev Res.pdf",
     label: "Download my resume",
   },
   {

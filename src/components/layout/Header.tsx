@@ -6,8 +6,8 @@ import { ThemeToggle } from "../features/ThemeToggle";
 const navigation = [
   { name: "Home", href: "#home" },
   { name: "About", href: "#about" },
-  { name: "Projects", href: "#projects" },
   { name: "Skills", href: "#skills" },
+  { name: "Projects", href: "#projects" },
   { name: "Contact", href: "#contact" },
   { name: "Resume", href: "./Jimmy Web Dev Res.pdf", target: "_blank" },
 ];

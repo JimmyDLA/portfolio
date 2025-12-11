@@ -11,7 +11,7 @@ export function About() {
 
           <Card className="p-8 card-gradient border-gradient">
             <img
-              src="./public/profilePic2.png"
+              src="portfolio/public/profilePic2.png"
               alt="Profile Picture"
               className="profilePic mb-10 mx-auto rounded-full border-4 border-border w-56 h-56 md:w-96 md:h-96"
             />
