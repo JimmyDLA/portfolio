@@ -1,3 +1,4 @@
+const TOTAL_BUBBLES = 85;
 
 function randomColor(){
   let rgb1 = Math.floor(Math.random() * 255);
@@ -12,22 +13,17 @@ function time(){
   return sec;
 }
 
-let audio = $(".audioDemo");
-console.log(audio);
+let audio = document.getElementById("audioDemo");
 let mute = false;
-
-function toggleMuteAudio(){
-    audio.prop("muted",!audio.prop("muted"));
-}
 
 function sound(){
   if (mute === false) {
-    document.querySelector(".muteIcon").style.backgroundImage = "url(./public/unMuteIcon.png)";
-    toggleMuteAudio();
+    document.querySelector(".muteIcon").style.backgroundImage = "url(./public/muteIcon.png)";
+    audio.play()
     mute = !mute;
   } else{
-    document.querySelector(".muteIcon").style.backgroundImage = "url(./public/muteIcon.png)";
-    toggleMuteAudio();
+    document.querySelector(".muteIcon").style.backgroundImage = "url(./public/unMuteIcon.png)";
+    audio.pause()
     mute = !mute;
   }
 }
@@ -69,9 +65,11 @@ function opacityMinus(){
 
 //function to create bubbles affects
 function makeBub(howMany){
+  let bubbleCont = document.createElement("div");
+  bubbleCont.className = "bubbleContainer";
   for(let i = 0; i < howMany; i++) {
     let ranNum = widHeight();
-    let newBubble = document.createElement("DIV")
+    let newBubble = document.createElement("DIV");
     newBubble.className="focus focusFade";
     newBubble.id = "bubble" + i;
     newBubble.style.backgroundColor = flashingLights();
@@ -80,19 +78,11 @@ function makeBub(howMany){
     newBubble.style.top = yAxis() + "%";
     newBubble.style.left = xAxis() + "%";
     newBubble.style.transitionDelay = `${i*0.1}s`;
-    newBubble.addEventListener("mouseout", opacityWhole);
-    newBubble.addEventListener("mouseover", opacityMinus);
-    document.querySelector("body").appendChild(newBubble);
-    newBubble.focus();
+    newBubble.style.animationDuration = time() + "s";
+    bubbleCont.appendChild(newBubble);
     newBubble.className = "focus";
   }
-}
-
-function addAnimation(){
-  for (var i = 0; i < 85; i++) {
-    bubble = document.querySelector(`#bubble${i}`);
-    bubble.style.animationDuration = time() + "s";
-  }
+  document.querySelector("body").appendChild(bubbleCont);
 }
 
 function makeJ(){
@@ -129,7 +119,7 @@ function makeLine(){
 }
 
 // THIS IS TO MAKE HOW MANY BUBBLES
-makeBub(85)
+makeBub(TOTAL_BUBBLES)
 
 // THIS IS TO FADE IN NAME, TITLE, AND BUBBLES
 setTimeout(makeJ, 1000)
@@ -140,7 +130,6 @@ setTimeout(makeY, 3000)
 setTimeout(makeLname, 4000)
 setTimeout(makeWebDev, 5000)
 setTimeout(makeLine, 4500)
-setTimeout(addAnimation, 6500)
 
 //close all tabs
 function closeAll(){
