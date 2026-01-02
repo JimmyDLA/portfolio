@@ -79,12 +79,6 @@ export default {
           "0%, 100%": { backgroundPosition: "0% 50%" },
           "50%": { backgroundPosition: "100% 50%" },
         },
-        float: {
-          "0%": { transform: "rotate(0deg) translateX(50px) rotate(0deg)" },
-          "100%": {
-            transform: "rotate(360deg) translateX(50px) rotate(-360deg)",
-          },
-        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
@@ -92,7 +86,6 @@ export default {
         "fade-in": "fade-in 1.6s ease-out",
         "slide-in": "slide-in 2.6s ease-out",
         "gradient-shift": "gradient-shift 8s ease infinite",
-        float: "float 10s linear infinite",
       },
       backgroundSize: {
         "200%": "200% 200%",
