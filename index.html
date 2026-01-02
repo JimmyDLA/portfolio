@@ -1,237 +1,69 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <meta charset="utf-8">
-    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
-    <meta http-equiv="Pragma" content="no-cache" />
-    <meta http-equiv="Expires" content="0" />    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-    <link rel="icon" href="./public/pageLogo.png">
-    <title>JimmyDLA Portfolio</title>
-    <link href="https://fonts.googleapis.com/css?family=Anton|Shrikhand" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Bungee+Shade|Catamaran:900|Montserrat|Heebo:800" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Fredoka+One" rel="stylesheet">
-    <link rel="stylesheet" href="style.css" media="screen" title="no title">
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="public/page-icon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Essential SEO Meta Tags -->
+    <title>Jimmy De Los Angeles - Software Engineer</title>
+    <meta
+      name="description"
+      content="Portfolio of Jimmy De Los Angeles, a software engineer and creative developer from NYC. Explore projects including Monitor, Mathid, Retro Snake, and more."
+    />
+    <meta
+      name="keywords"
+      content="software engineer, developer, portfolio, React, JavaScript, WebRTC, NYC, Jimmy De Los Angeles"
+    />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.jimmydla.com" />
+    <meta
+      property="og:title"
+      content="Jimmy De Los Angeles - Software Engineer"
+    />
+    <meta
+      property="og:description"
+      content="Portfolio of Jimmy De Los Angeles, a software engineer and creative developer from NYC. Explore projects including Monitor, Mathid, Retro Snake, and more."
+    />
+    <meta property="og:image" content="%BASE_URL%/head-image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:site_name" content="Jimmy De Los Angeles Portfolio" />
+    <meta property="og:locale" content="en_US" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content="https://www.jimmydla.com" />
+    <meta
+      name="twitter:title"
+      content="Jimmy De Los Angeles - Software Engineer"
+    />
+    <meta
+      name="twitter:description"
+      content="Portfolio of Jimmy De Los Angeles, a software engineer and creative developer from NYC. Explore projects including Monitor, Mathid, Retro Snake, and more."
+    />
+    <meta name="twitter:image" content="%BASE_URL%/head-image.png" />
+
+    <!-- Schema.org JSON-LD -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Jimmy De Los Angeles",
+        "url": "https://www.jimmydla.com",
+        "jobTitle": "Software Engineer",
+        "description": "Software engineer and creative developer from NYC",
+        "sameAs": [
+          "https://github.com/jimmydla",
+          "https://linkedin.com/in/jimmydla"
+        ]
+      }
+    </script>
   </head>
-
   <body>
-    <header id="header">
-      <div class="homeLogo" onclick="closeAll()">
-        <h4>JDLA</h4>
-      </div>
-
-      <div class="burgerContainer" onclick="menuButton()">
-        <div class="bar1"></div>
-        <div class="bar2"></div>
-        <div class="bar3"></div>
-      </div>
-
-      <ul>
-        <li><a href="#" onclick="openAbout(this)" id="about" >About</a></li>
-        <li><a href="#" onclick="openProject(this)" id="projects">Projects</a></li>
-        <li><a href="#" onclick="openContact(this)" id="contact">Contact</a></li>
-        <li><a href="./Jimmy Web Dev Res.pdf" target="_blank">Resume</a></li>
-      </ul>
-    </header>
-    <div class="ul">
-      <li><a href="#" onclick="openAboutMobile()" id="about" >About</a></li>
-      <li><a href="#" onclick="openProjectMobile()" id="projects">Projects</a></li>
-      <li><a href="#" onclick="openContactMobile()" id="contact">Contact</a></li>
-      <li><a href="./Jimmy Web Dev Res.pdf" target="_blank">Resume</a></li>
-    </div>
-
-    <a href="#mute">
-      <div class="muteIcon" onclick="sound()"></div>
-    </a>
-
-    <audio id="audioDemo" src="./public/intro.mp3" preload="auto" loop autoplay>
-      <source src="./public/intro.mp3" type="audio/mpeg" id="audio" autoplay loop>
-    </audio>
-
-          <!-- HOME PAGE  -->
-    <div id="main">
-      <div class="title">
-        <div class="fName">
-          <div class="letters" id="letterJ">J</div>
-          <div class="letters" id="letterI">I</div>
-          <div class="letters" id="letterM">M</div>
-          <div class="letters" id="letterMm">M</div>
-          <div class="letters" id="letterY">Y</div>
-        </div>
-
-        <div class="lName">
-          DE LOS ANGELES
-        </div>
-
-        <hr class="line">
-
-        <div class="webDev">
-          Software Engineer
-        </div>
-      </div>
-
-      <div class="socialNet" id="socialHome">
-        <a href="https://github.com/JimmyDLA" target="_blank">
-          <div id="github"></div>
-        </a>
-
-        <a href="https://www.linkedin.com/in/jimmydla" target="_blank">
-          <div id="linkedin"></div>
-        </a>
-
-        <a href="https://www.instagram.com/j_dla" target="_blank">
-          <div id="instagram"></div>
-        </a>
-      </div>
-    </div>
-
-            <!-- ABOUT PAGE / HIDDEN ELEMENTS -->
-    <div class="aboutNav">
-      <div class="insideAbout">
-        <div class="profilePic"></div>
-        <h5>
-          Hi, my name is Jimmy De Los Angeles and
-          I am from Queens, NY. I grew up in the Bronx until
-          the age of 5 before moving to the Dominican
-          Republic for a little more than a decade.
-          I'm grateful for this experience because
-          it has been extremely humbling. I came
-          back to the New York to finish 
-          school and attend college. Initially, I
-          was guided by my father to pursue a
-          career in finance and accounting, but
-          I quickly realized that was not my
-          calling. I had always been a very
-          curious individual who always wanted
-          to know how everthing works. Coding is
-          the manifestation of my curiosity and
-          my boundless imagination. This has allowed me to translate 
-          complex ideas and problems into extraordinary solutions and script.
-          These are the greatest aspect of my career that
-          I’m excited to be a part of.
-        </h5>
-      </div>
-
-
-        <div id="socialInside">
-          <a href="https://github.com/JimmyDLA" target="_blank">
-            <div id="github"></div>
-          </a>
-
-          <a href="https://www.linkedin.com/in/jimmydla" target="_blank">
-            <div id="linkedin"></div>
-          </a>
-
-          <a href="https://www.instagram.com/j_dla" target="_blank">
-            <div id="instagram"></div>
-          </a>
-        </div>
-    </div>
-
-                <!-- CONTACT PAGE / HIDDEN ELEMENT  -->
-    <div class="contNav">
-      <div class="insideCont">
-        <form id="contactForm" onsubmit="submitForm(); return false;">
-          <div class="containerForm">
-            <input type="text" id="inputName" placeholder="Name" required>
-            <input type="email" id="inputEmail" placeholder="Email address" required>
-            <input type="text" id="inputSubject" placeholder="Subject">
-            <textarea type="text" id="inputMessage" placeholder="Message" required></textarea>
-            <input type="submit" value="Submit" id="inputSubmit">
-          </div>
-
-          <span id="status"></span>
-        </form>
-
-        <div id="socialCont">
-          <a href="https://github.com/JimmyDLA" target="_blank">
-            <div id="github"></div>
-          </a>
-
-          <a href="https://www.linkedin.com/in/jimmydla" target="_blank">
-            <div id="linkedin"></div>
-          </a>
-
-          <a href="https://www.instagram.com/j_dla" target="_blank">
-            <div id="instagram"></div>
-          </a>
-        </div>
-      </div>
-    </div>
-
-                  <!-- PROJECT PAGE / HIDDEN DIV  -->
-    <div class="projNav">
-      <div class="insideProj">
-        <a class="allProj" id="proj8" href="https://github.com/JimmyDLA/Baby-Monitor" target="_blank">
-          <div class="projImg8"></div>
-          <h3>Monitor</h3>
-          <p>Monitor your baby from any where with any 
-            2 device (phone, table, or laptop). This is all possible with WebRTC.
-          </br>
-            <u>Tech:</u> JavaScript/React Native/WebRTC/Express.js and more
-          </p>
-        </a>
-        <a class="allProj" id="proj7" href="https://github.com/JimmyDLA/Mathid" target="_blank">
-          <div class="projImg7"></div>
-          <h3>Mathid</h3>
-          <p>Mathid (math+kid) is a fun and engaging math game app built spefically for my kids.
-          </br>
-            <u>Tech:</u> TypeScript/React Native/iOS and more
-          </p>
-        </a>
-        <a class="allProj" id="proj5" href="https://jimmydla.github.io/RetroSnake/" target="_blank">
-          <div class="projImg5"></div>
-          <h3>Retro Snake</h3>
-          <p>This is a recreation of the classic "Snake" game. 
-            I was able to bring this classic game back to life with a few simple touch ups on 
-            sounds and effects. </br>
-            <u>Tech:</u> JavaScript/HTML/CSS/Collision detection and more
-          </p>
-        </a>
-        <a class="allProj" id="proj" href="https://github.com/JimmyDLA/mobileIM" target="_blank">
-          <div class="projImg6"></div>
-          <h3>MobileIM</h3>
-          <p>This is a messagner using Google oAuth to sign in. Allows anyone to jump into this 
-            global chat room and charm in. </br>
-            <u>Tech:</u> JavaScript/React Native/Google OAuth/and more
-          </p>
-        </a>
-        <a class="allProj" id="proj1" href="https://jimmydla.github.io/d-ball-project1/frontPage.html" target="_blank">
-          <div class="projImg1"></div>
-          <h3>D-Ball Game</h3>
-          <p>A game where you have to destroy all the bricks and </br>
-            not let the ball hit the ground. </br>
-            <u>Tech:</u> JavaScript/HTML/CSS/jQuery/and more
-          </p>
-        </a>
-        <!-- <a class="allProj" id="proj2" href="http://nycwreckamended.com/" target="_blank">
-          <div class="projImg2"></div>
-          <h3 id="nycWreck">NYC Wreck-A-Mended</h3>
-          <p>NYC Wreck-A-Mended is a modern auto body shop website with
-              unique features and animation. </br>
-            <u>Tech:</u> JavaScript/HTML5/CSS3/Animation/AOS and more
-          </p>
-        </a>
-
-        <a class="allProj" id="proj3" href="https://wid-blink.herokuapp.com/" target="_blank">
-          <div class="projImg3"></div>
-          <h3>Blink </h3>
-          <p>Blink is a Full Stack app lets you creats users and a bucket</br>
-            list of places or things to do. </br>
-            <u>Tech:</u> Full Stack/React.js/SQL DB/Google Auth/and more
-          </p>
-        </a>
-
-        <a class="allProj" id="proj4" href="https://beerafideme.herokuapp.com/" target="_blank">
-          <div class="projImg4"></div>
-          <h3>Beerafide</h3>
-          <p>Fun Full Stack app gives you the power to search any beer</br>
-            and give you the most important stats. </br>
-            <u>Tech:</u> Full Stack/JavaScript/API/MVC/and more
-          </p>
-        </a> -->
-      </div>
-    </div>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
   </body>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
-  <script src="script.js" charset="utf-8"></script>
 </html>
