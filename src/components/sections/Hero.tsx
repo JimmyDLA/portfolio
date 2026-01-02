@@ -1,4 +1,5 @@
 import { ArrowDown } from "lucide-react";
+import { motion } from "framer-motion";
 import { Button } from "../ui/button";
 
 export function Hero() {
@@ -10,15 +11,80 @@ export function Hero() {
       {/* Background gradient effect */}
       <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-background to-background" />
       {/* top right */}
-      <div className="absolute top-20 right-10 w-40 h-40 md:w-96 md:h-96 bg-primary/40 rounded-full blur-3xl animate-float" />
+      <motion.div
+        className="absolute top-20 right-10 w-40 h-40 md:w-96 md:h-96 bg-primary/40 rounded-full blur-3xl opacity-50"
+        animate={{
+          x: [0, 100, -50, 0],
+          y: [0, -50, 100, 0],
+          scale: [1, 1.1, 0.9, 1],
+        }}
+        transition={{
+          duration: 25,
+          repeat: Infinity,
+          ease: "linear",
+          times: [0, 0.33, 0.66, 1],
+        }}
+      />
       {/* top left */}
-      <div className="absolute top-20 left-10 w-40 h-40 md:w-96 md:h-96 bg-cyan-500/40 rounded-full blur-3xl animate-float" />
+      <motion.div
+        className="absolute top-20 left-10 w-40 h-40 md:w-96 md:h-96 bg-cyan-500/40 rounded-full blur-3xl opacity-50"
+        animate={{
+          x: [0, -100, 50, 0],
+          y: [0, 100, -50, 0],
+          scale: [1, 1.2, 0.8, 1],
+        }}
+        transition={{
+          duration: 30,
+          repeat: Infinity,
+          ease: "linear",
+          times: [0, 0.33, 0.66, 1],
+        }}
+      />
       {/* bottom right */}
-      <div className="absolute bottom-20 right-10 w-40 h-40 md:w-96 md:h-96 bg-cyan-500/40 rounded-full blur-3xl animate-float" />
+      <motion.div
+        className="absolute bottom-20 right-10 w-40 h-40 md:w-96 md:h-96 bg-cyan-500/40 rounded-full blur-3xl opacity-50"
+        animate={{
+          x: [0, 50, -100, 0],
+          y: [0, -100, 50, 0],
+          scale: [1, 0.9, 1.1, 1],
+        }}
+        transition={{
+          duration: 28,
+          repeat: Infinity,
+          ease: "linear",
+          times: [0, 0.33, 0.66, 1],
+        }}
+      />
       {/* bottom left */}
-      <div className="absolute bottom-10 left-0 w-40 h-40 md:w-96 md:h-96 bg-primary/20 rounded-full blur-3xl animate-float" />
+      <motion.div
+        className="absolute bottom-10 left-0 w-40 h-40 md:w-96 md:h-96 bg-primary/20 rounded-full blur-3xl opacity-50"
+        animate={{
+          x: [0, -50, 100, 0],
+          y: [0, 50, -100, 0],
+          scale: [1, 1.1, 0.9, 1],
+        }}
+        transition={{
+          duration: 32,
+          repeat: Infinity,
+          ease: "linear",
+          times: [0, 0.33, 0.66, 1],
+        }}
+      />
       {/* center */}
-      <div className="absolute bottom-100 right-100 w-40 h-40 md:w-80 md:h-80 bg-green-500/30 rounded-full blur-3xl animate-float" />
+      <motion.div
+        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-40 h-40 md:w-80 md:h-80 bg-green-500/30 rounded-full blur-3xl opacity-50"
+        animate={{
+          x: [0, 100, -100, 0],
+          y: [0, -100, 100, 0],
+          scale: [1, 1.2, 0.8, 1],
+        }}
+        transition={{
+          duration: 35,
+          repeat: Infinity,
+          ease: "linear",
+          times: [0, 0.33, 0.66, 1],
+        }}
+      />
 
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-4xl mx-auto text-center space-y-8 animate-fade-in">
