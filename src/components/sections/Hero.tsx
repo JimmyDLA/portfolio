@@ -8,81 +8,75 @@ export function Hero() {
       id="home"
       className="min-h-screen flex items-center justify-center relative overflow-hidden"
     >
-      {/* Background gradient effect */}
       <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-background to-background" />
-      {/* top right */}
       <motion.div
         className="absolute top-20 right-10 w-40 h-40 md:w-96 md:h-96 bg-primary/40 rounded-full blur-3xl opacity-50"
         animate={{
-          x: [0, 100, -50, 0],
-          y: [0, -50, 100, 0],
-          scale: [1, 1.1, 0.9, 1],
+          x: [0, 300, -200, 400, -100],
+          y: [0, -200, 300, -100, 200],
+          scale: [1, 1.2, 0.9, 1.1, 1],
         }}
         transition={{
-          duration: 25,
+          duration: 45,
           repeat: Infinity,
           ease: "linear",
-          times: [0, 0.33, 0.66, 1],
+          times: [0, 0.25, 0.5, 0.75, 1],
         }}
       />
-      {/* top left */}
       <motion.div
         className="absolute top-20 left-10 w-40 h-40 md:w-96 md:h-96 bg-cyan-500/40 rounded-full blur-3xl opacity-50"
         animate={{
-          x: [0, -100, 50, 0],
-          y: [0, 100, -50, 0],
-          scale: [1, 1.2, 0.8, 1],
+          x: [0, -300, 200, -400, 100],
+          y: [0, 300, -200, 400, -100],
+          scale: [1, 0.8, 1.2, 0.9, 1],
         }}
         transition={{
-          duration: 30,
+          duration: 50,
           repeat: Infinity,
           ease: "linear",
-          times: [0, 0.33, 0.66, 1],
+          times: [0, 0.25, 0.5, 0.75, 1],
         }}
       />
-      {/* bottom right */}
       <motion.div
         className="absolute bottom-20 right-10 w-40 h-40 md:w-96 md:h-96 bg-cyan-500/40 rounded-full blur-3xl opacity-50"
         animate={{
-          x: [0, 50, -100, 0],
-          y: [0, -100, 50, 0],
-          scale: [1, 0.9, 1.1, 1],
+          x: [0, 400, -300, 200, -500],
+          y: [0, -400, 200, -300, 100],
+          scale: [1, 1.1, 0.9, 1.2, 1],
         }}
         transition={{
-          duration: 28,
+          duration: 55,
           repeat: Infinity,
           ease: "linear",
-          times: [0, 0.33, 0.66, 1],
+          times: [0, 0.25, 0.5, 0.75, 1],
         }}
       />
-      {/* bottom left */}
       <motion.div
         className="absolute bottom-10 left-0 w-40 h-40 md:w-96 md:h-96 bg-primary/20 rounded-full blur-3xl opacity-50"
         animate={{
-          x: [0, -50, 100, 0],
-          y: [0, 50, -100, 0],
-          scale: [1, 1.1, 0.9, 1],
+          x: [0, -400, 300, -200, 500],
+          y: [0, 400, -300, 200, -100],
+          scale: [1, 0.9, 1.1, 0.8, 1],
         }}
         transition={{
-          duration: 32,
+          duration: 60,
           repeat: Infinity,
           ease: "linear",
-          times: [0, 0.33, 0.66, 1],
+          times: [0, 0.25, 0.5, 0.75, 1],
         }}
       />
-      {/* center */}
       <motion.div
         className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-40 h-40 md:w-80 md:h-80 bg-green-500/30 rounded-full blur-3xl opacity-50"
         animate={{
-          x: [0, 100, -100, 0],
-          y: [0, -100, 100, 0],
-          scale: [1, 1.2, 0.8, 1],
+          x: [0, 500, -400, 300, -200],
+          y: [0, -300, 400, -200, 300],
+          scale: [1, 1.2, 0.8, 1.1, 1],
         }}
         transition={{
-          duration: 35,
+          duration: 65,
           repeat: Infinity,
           ease: "linear",
-          times: [0, 0.33, 0.66, 1],
+          times: [0, 0.25, 0.5, 0.75, 1],
         }}
       />
 
