@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "../ui/button";
 import { ThemeToggle } from "../features/ThemeToggle";
@@ -16,6 +16,8 @@ const navigation = [
 export function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const menuRef = useRef<HTMLDivElement>(null);
+  const buttonRef = useRef<HTMLButtonElement>(null);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -26,13 +28,31 @@ export function Header() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  useEffect(() => {
+    function handleClickOutside(event: MouseEvent) {
+      if (
+        isMobileMenuOpen &&
+        menuRef.current &&
+        !menuRef.current.contains(event.target as Node) &&
+        buttonRef.current &&
+        !buttonRef.current.contains(event.target as Node)
+      ) {
+        setIsMobileMenuOpen(false);
+      }
+    }
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [isMobileMenuOpen]);
+
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isMobileMenuOpen || isScrolled
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isMobileMenuOpen || isScrolled
           ? "bg-background/80 backdrop-blur-lg border-b border-border"
           : "bg-transparent"
-      }`}
+        }`}
     >
       <nav className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
@@ -59,6 +79,7 @@ export function Header() {
           <div className="flex items-center gap-2 md:hidden">
             <ThemeToggle />
             <Button
+              ref={buttonRef}
               variant="ghost"
               size="icon"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
@@ -70,7 +91,10 @@ export function Header() {
 
         {/* Mobile Navigation */}
         {isMobileMenuOpen && (
-          <div className="md:hidden mt-4 pb-4 space-y-4 animate-fade-in">
+          <div
+            ref={menuRef}
+            className="md:hidden mt-4 pb-4 space-y-4 animate-fade-in"
+          >
             {navigation.map((item) => (
               <a
                 key={item.name}
