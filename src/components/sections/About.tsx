@@ -1,5 +1,5 @@
 import { Card } from "../ui/card";
-import ProfilePic from "../../../public/profilePic2.png";
+import ProfilePic from "../../../public/profilePic3.png";
 
 export function About() {
   return (
