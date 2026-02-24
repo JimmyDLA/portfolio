@@ -5,6 +5,28 @@ import { Button } from "../ui/button";
 const categories = ["All", "Mobile Apps", "Web Apps"];
 
 const projects = [
+    {
+    id: 0,
+    title: "Fiction Dev",
+    category: "Web Apps",
+    description:
+      "Fiction Development Making Imagination Reality. This is company website that bridges the gap between complex technical requirements and intuitive user experiences.",
+    techStack: [
+      "JavaScript",
+      "React",
+      "TypeScript",
+      "Vite",
+      "Tailwinds",
+      "HTML",
+      "CSS",
+      "Framer Motion",
+
+    ],
+    image:
+      "../../../public/fiction-dev.png",
+    demoUrl: "https://fictiondev.com/",
+    sourceUrl: "https://github.com/JimmyDLA/fiction-dev",
+  },
   {
     id: 1,
     title: "Baby Monitor",
