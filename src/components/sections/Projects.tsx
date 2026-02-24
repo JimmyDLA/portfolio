@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { ProjectCard } from "../features/ProjectCard";
 import { Button } from "../ui/button";
+import fictionDev from "../../../public/fiction-dev.png";
 
 const categories = ["All", "Mobile Apps", "Web Apps"];
 
@@ -22,8 +23,7 @@ const projects = [
       "Framer Motion",
 
     ],
-    image:
-      "../../../public/fiction-dev.png",
+    image: fictionDev,
     demoUrl: "https://fictiondev.com/",
     sourceUrl: "https://github.com/JimmyDLA/fiction-dev",
   },
